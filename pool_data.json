@@ -85,7 +85,8 @@
       "id": 10,
       "name": "Gunite",
       "style": "bold-caps",
-      "date": "2026-04-08",
+      "date": null,
+      "date": null,
       "description": "Gunite (shotcrete) sprayed to form the pool shell. The pool shape is now permanent.",
       "images": []
     },
