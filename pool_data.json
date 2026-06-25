@@ -6,66 +6,80 @@
   "stages": [
     {
       "id": 1,
+      "name": "Pool Layout",
+      "style": "normal",
+      "date": "2026-05-09",
+      "description": "Final layout of the pool and spa.",
+      "images": [
+        "images/Layout1.jpg",
+        "images/Layout2.jpg",
+        "images/Layout3.jpg",
+        "images/Layout4.jpg",
+        "images/Layout5.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Pool Design",
+      "style": "normal",
+      "date": "2026-05-09",
+      "description": "Picked out design pallet for pool and spa.",
+      "images": ["images/pallet.jpg"]
+    },
+    {
+      "id": 3,
       "name": "Move AC Unit",
       "style": "normal",
       "date": "2026-05-27",
       "description": "Relocated the AC unit to make room for pool construction access.",
-      "images": ["images/20260619_083830.jpg?text=Move+AC+Unit"]
+      "images": ["images/AC1.jpg", "images/AC2.jpg"]
     },
     {
-      "id": 2,
+      "id": 4,
       "name": "Cap Sprinkler Pipes",
       "style": "normal",
       "date": "2026-06-19",
       "description": "Capped all sprinkler pipes in the pool construction zone to prevent damage during excavation.",
       "images": [
-        "images/cap_left_ac.jpg?text=Cap+Sprinklers+Left+by+AC",
-        "images/cap_right.jpg?text=Cap+Sprinklers+Right",
-        "images/removed_pipe.jpg?text=Sprinkler+Box+Removed"
+        "images/cap_left_ac.jpg",
+        "images/cap_right.jpg",
+        "images/removed_pipe.jpg"
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "name": "Locate Utilities",
       "style": "normal",
       "date": "2026-06-17",
       "description": "Utility lines marked and located prior to any digging.",
-      "images": []
+      "images": ["images/utilities_line.mp4"]
     },
     {
-      "id": 4,
+      "id": 6,
       "name": "Strip Sod",
       "style": "normal",
       "date": "2026-06-22",
       "description": "Removed sod from the pool area in preparation for excavation.",
-      "images": []
+      "images": ["images/strip_sod.jpg"]
     },
     {
-      "id": 5,
-      "name": "Locates",
-      "style": "normal",
-      "date": "2026-06-22",
-      "description": "Final confirmation of all underground utility locations.",
-      "images": []
-    },
-    {
-      "id": 6,
+      "id": 8,
       "name": "Excavation",
       "style": "bold-caps",
       "date": "2026-06-22",
       "description": "Major excavation of the pool shell. Dirt hauled off site.",
-      "images": []
+      "images": ["images/execavation1.jpg", "images/execavation2.jpg"]
     },
     {
-      "id": 7,
+      "id": 9,
       "name": "LDS Layout, Dig, Steel, Install Silt Fence",
       "style": "normal",
       "date": "2026-06-23",
       "description": "Layout completed, additional digging, steel rebar installed, and silt fence erected for erosion control.",
-      "images": []
+      "images": ["images/LDSLayout.jpg", "images/LDSLayout2.jpg", "images/steel.jpg", "images/steel2.jpg", "images/Silts.jpg"]
     },
-	   {
-      "id": 8,
+    {
+      "id": 10,
       "name": "Pre-Plumbing & Pre-Electric",
       "style": "normal",
       "date": "2026-06-23",
@@ -73,25 +87,23 @@
       "images": []
     },
     {
-      "id": 9,
+      "id": 11,
       "name": "Inspection",
       "style": "normal",
       "date": "2026-06-24",
       "description": "County inspection of steel and layout before gunite.",
-      "images": []
+      "images": ["images/passed-inspection.jpg"]
     },
- 
     {
-      "id": 10,
+      "id": 12,
       "name": "Gunite",
       "style": "bold-caps",
-      "date": null,
       "date": null,
       "description": "Gunite (shotcrete) sprayed to form the pool shell. The pool shape is now permanent.",
       "images": []
     },
     {
-      "id": 11,
+      "id": 13,
       "name": "Pre-Grade",
       "style": "normal",
       "date": null,
@@ -99,7 +111,7 @@
       "images": []
     },
     {
-      "id": 12,
+      "id": 14,
       "name": "Rough Plumbing & Electric",
       "style": "normal",
       "date": null,
@@ -107,7 +119,7 @@
       "images": []
     },
     {
-      "id": 13,
+      "id": 15,
       "name": "Inspection",
       "style": "normal",
       "date": null,
@@ -115,7 +127,7 @@
       "images": []
     },
     {
-      "id": 14,
+      "id": 16,
       "name": "Backfill",
       "style": "normal",
       "date": null,
@@ -123,7 +135,7 @@
       "images": []
     },
     {
-      "id": 15,
+      "id": 17,
       "name": "Deck Install",
       "style": "bold-caps",
       "date": null,
@@ -131,7 +143,7 @@
       "images": []
     },
     {
-      "id": 16,
+      "id": 18,
       "name": "Pre-Electric",
       "style": "normal",
       "date": null,
@@ -139,7 +151,7 @@
       "images": []
     },
     {
-      "id": 17,
+      "id": 19,
       "name": "Bond Beam Installation",
       "style": "normal",
       "date": null,
@@ -147,7 +159,7 @@
       "images": []
     },
     {
-      "id": 18,
+      "id": 20,
       "name": "Coping",
       "style": "normal",
       "date": null,
@@ -155,7 +167,7 @@
       "images": []
     },
     {
-      "id": 19,
+      "id": 21,
       "name": "Termite Treatment",
       "style": "normal",
       "date": null,
@@ -163,7 +175,7 @@
       "images": []
     },
     {
-      "id": 20,
+      "id": 22,
       "name": "Deck Pour & Texture",
       "style": "normal",
       "date": null,
@@ -171,7 +183,7 @@
       "images": []
     },
     {
-      "id": 21,
+      "id": 23,
       "name": "Equipment Delivery & Install",
       "style": "normal",
       "date": null,
@@ -179,7 +191,7 @@
       "images": []
     },
     {
-      "id": 22,
+      "id": 24,
       "name": "Screen Measure",
       "style": "normal",
       "date": null,
@@ -187,7 +199,7 @@
       "images": []
     },
     {
-      "id": 23,
+      "id": 25,
       "name": "Interior Prep",
       "style": "normal",
       "date": null,
@@ -195,7 +207,7 @@
       "images": []
     },
     {
-      "id": 24,
+      "id": 26,
       "name": "Install Screen",
       "style": "normal",
       "date": null,
@@ -203,7 +215,7 @@
       "images": []
     },
     {
-      "id": 25,
+      "id": 27,
       "name": "Door & Window Alarms",
       "style": "normal",
       "date": null,
@@ -211,7 +223,7 @@
       "images": []
     },
     {
-      "id": 26,
+      "id": 28,
       "name": "Inspection",
       "style": "normal",
       "date": null,
@@ -219,7 +231,7 @@
       "images": []
     },
     {
-      "id": 27,
+      "id": 29,
       "name": "Clean Out",
       "style": "normal",
       "date": null,
@@ -227,7 +239,7 @@
       "images": []
     },
     {
-      "id": 28,
+      "id": 30,
       "name": "Interior Finish, Installation & Acid Wash",
       "style": "normal",
       "date": null,
@@ -235,7 +247,7 @@
       "images": []
     },
     {
-      "id": 29,
+      "id": 31,
       "name": "Final Grade",
       "style": "normal",
       "date": null,
@@ -243,7 +255,7 @@
       "images": []
     },
     {
-      "id": 30,
+      "id": 32,
       "name": "Final Inspection",
       "style": "bold-caps",
       "date": null,
