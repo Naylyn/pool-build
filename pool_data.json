@@ -1,0 +1,253 @@
+{
+  "project": {
+    "title": "Pool Build Progress",
+    "address": "Our Pool Journey"
+  },
+  "stages": [
+    {
+      "id": 1,
+      "name": "Move AC Unit",
+      "style": "normal",
+      "date": "2026-05-27",
+      "description": "Relocated the AC unit to make room for pool construction access.",
+      "images": ["images/20260619_083830.jpg?text=Move+AC+Unit"]
+    },
+    {
+      "id": 2,
+      "name": "Cap Sprinkler Pipes",
+      "style": "normal",
+      "date": "2026-06-19",
+      "description": "Capped all sprinkler pipes in the pool construction zone to prevent damage during excavation.",
+      "images": [
+        "images/cap_left_ac.jpg?text=Cap+Sprinklers+Left+by+AC",
+        "images/cap_right.jpg?text=Cap+Sprinklers+Right",
+        "images/removed_pipe.jpg?text=Sprinkler+Box+Removed"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Locate Utilities",
+      "style": "normal",
+      "date": "2026-06-17",
+      "description": "Utility lines marked and located prior to any digging.",
+      "images": []
+    },
+    {
+      "id": 4,
+      "name": "Strip Sod",
+      "style": "normal",
+      "date": "2026-06-22",
+      "description": "Removed sod from the pool area in preparation for excavation.",
+      "images": []
+    },
+    {
+      "id": 5,
+      "name": "Locates",
+      "style": "normal",
+      "date": "2026-06-22",
+      "description": "Final confirmation of all underground utility locations.",
+      "images": []
+    },
+    {
+      "id": 6,
+      "name": "Excavation",
+      "style": "bold-caps",
+      "date": "2026-06-22",
+      "description": "Major excavation of the pool shell. Dirt hauled off site.",
+      "images": []
+    },
+    {
+      "id": 7,
+      "name": "LDS Layout, Dig, Steel, Install Silt Fence",
+      "style": "normal",
+      "date": "2026-06-23",
+      "description": "Layout completed, additional digging, steel rebar installed, and silt fence erected for erosion control.",
+      "images": []
+    },
+	   {
+      "id": 8,
+      "name": "Pre-Plumbing & Pre-Electric",
+      "style": "normal",
+      "date": "2026-06-23",
+      "description": "Underground plumbing and electrical conduit installed before inspection.",
+      "images": []
+    },
+    {
+      "id": 9,
+      "name": "Inspection",
+      "style": "normal",
+      "date": "2026-06-24",
+      "description": "County inspection of steel and layout before gunite.",
+      "images": []
+    },
+ 
+    {
+      "id": 10,
+      "name": "Gunite",
+      "style": "bold-caps",
+      "date": "2026-04-08",
+      "description": "Gunite (shotcrete) sprayed to form the pool shell. The pool shape is now permanent.",
+      "images": []
+    },
+    {
+      "id": 11,
+      "name": "Pre-Grade",
+      "style": "normal",
+      "date": null,
+      "description": "Initial grading around the pool area.",
+      "images": []
+    },
+    {
+      "id": 12,
+      "name": "Rough Plumbing & Electric",
+      "style": "normal",
+      "date": null,
+      "description": "Above-ground rough plumbing lines and electrical wiring installed.",
+      "images": []
+    },
+    {
+      "id": 13,
+      "name": "Inspection",
+      "style": "normal",
+      "date": null,
+      "description": "Rough plumbing and electrical inspection.",
+      "images": []
+    },
+    {
+      "id": 14,
+      "name": "Backfill",
+      "style": "normal",
+      "date": null,
+      "description": "Backfilling around the pool shell with dirt and compaction.",
+      "images": []
+    },
+    {
+      "id": 15,
+      "name": "Deck Install",
+      "style": "bold-caps",
+      "date": null,
+      "description": "Deck forms set and prepared for pouring.",
+      "images": []
+    },
+    {
+      "id": 16,
+      "name": "Pre-Electric",
+      "style": "normal",
+      "date": null,
+      "description": "Final pre-pour electrical runs and conduit placement.",
+      "images": []
+    },
+    {
+      "id": 17,
+      "name": "Bond Beam Installation",
+      "style": "normal",
+      "date": null,
+      "description": "Bond beam installed around the pool perimeter.",
+      "images": []
+    },
+    {
+      "id": 18,
+      "name": "Coping",
+      "style": "normal",
+      "date": null,
+      "description": "Coping stones installed around the pool edge.",
+      "images": []
+    },
+    {
+      "id": 19,
+      "name": "Termite Treatment",
+      "style": "normal",
+      "date": null,
+      "description": "Soil treated for termites beneath deck area.",
+      "images": []
+    },
+    {
+      "id": 20,
+      "name": "Deck Pour & Texture",
+      "style": "normal",
+      "date": null,
+      "description": "Concrete deck poured and textured finish applied.",
+      "images": []
+    },
+    {
+      "id": 21,
+      "name": "Equipment Delivery & Install",
+      "style": "normal",
+      "date": null,
+      "description": "Pool equipment (pump, filter, heater, salt system) delivered and installed.",
+      "images": []
+    },
+    {
+      "id": 22,
+      "name": "Screen Measure",
+      "style": "normal",
+      "date": null,
+      "description": "Screen enclosure measurements taken for fabrication.",
+      "images": []
+    },
+    {
+      "id": 23,
+      "name": "Interior Prep",
+      "style": "normal",
+      "date": null,
+      "description": "Pool interior prepped and cleaned for finish application.",
+      "images": []
+    },
+    {
+      "id": 24,
+      "name": "Install Screen",
+      "style": "normal",
+      "date": null,
+      "description": "Screen enclosure structure and panels installed.",
+      "images": []
+    },
+    {
+      "id": 25,
+      "name": "Door & Window Alarms",
+      "style": "normal",
+      "date": null,
+      "description": "Safety alarms installed on all pool access doors and windows per code.",
+      "images": []
+    },
+    {
+      "id": 26,
+      "name": "Inspection",
+      "style": "normal",
+      "date": null,
+      "description": "Screen and safety equipment inspection.",
+      "images": []
+    },
+    {
+      "id": 27,
+      "name": "Clean Out",
+      "style": "normal",
+      "date": null,
+      "description": "Full construction clean-out. Debris removed from site.",
+      "images": []
+    },
+    {
+      "id": 28,
+      "name": "Interior Finish, Installation & Acid Wash",
+      "style": "normal",
+      "date": null,
+      "description": "Interior plaster or pebble finish applied, then acid washed for prep.",
+      "images": []
+    },
+    {
+      "id": 29,
+      "name": "Final Grade",
+      "style": "normal",
+      "date": null,
+      "description": "Final landscaping grade and cleanup around the entire pool area.",
+      "images": []
+    },
+    {
+      "id": 30,
+      "name": "Final Inspection",
+      "style": "bold-caps",
+      "date": null,
+      "description": "Final county inspection and certificate of completion.",
+      "images": []
+    }
+  ]
+}
