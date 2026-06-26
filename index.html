@@ -364,7 +364,8 @@ function selectStage(arrayIdx) {
   dateEl.textContent = s.date ? formatDate(s.date) : 'Not yet scheduled';
   dateEl.className   = s.date ? 'text-white font-semibold' : 'text-slate-400 italic';
 
-  document.getElementById('detail-desc').textContent = s.description || '';
+  //document.getElementById('detail-desc').textContent = s.description || '';
+  document.getElementById('detail-desc').innerHTML = (s.description || '').replace(/\n/g, '<br>');
 
   buildCarousel(s.images || []);
 

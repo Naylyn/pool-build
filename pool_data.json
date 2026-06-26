@@ -100,14 +100,14 @@
       "style": "bold-caps",
       "date": "2026-06-26",
       "description": "Gunite (shotcrete) sprayed to form the pool shell. The pool shape is now permanent.",
-      "images": ["images/gunite1.jpeg", "images/gunite2.jpeg", "images/gunite3.jpeg", "images/gunite4.jpeg", "images/gunite5.jpeg", "images/gunite6.jpeg"]
+      "images": ["images/gunite1.jpeg", "images/gunite2.jpeg", "images/gunite3.jpeg", "images/gunite4.jpeg", "images/gunite5.jpeg", "images/gunite6.jpeg", "images/gunite7.jpeg", "images/gunite8.jpeg"]
     },
     {
       "id": 13,
       "name": "Pre-Grade",
       "style": "normal",
       "date": null,
-      "description": "Initial grading around the pool area.",
+      "description": "Initial grading around the pool area. \nGrading in pool construction refers to leveling and shaping the ground to create a stable base for the pool, preventing issues like cracking or sinking. Proper grading also ensures water drains away from the pool area to avoid erosion and drainage problems.",
       "images": []
     },
     {
@@ -131,7 +131,7 @@
       "name": "Backfill",
       "style": "normal",
       "date": null,
-      "description": "Backfilling around the pool shell with dirt and compaction.",
+      "description": "Backfilling around the pool shell with dirt and compaction. \nBackfill in pool construction refers to the process of filling the excavated area around a pool with soil or other materials after the pool is installed. This is essential for providing support, preventing moisture issues, and ensuring the stability of the pool structure.",
       "images": []
     },
     {
@@ -257,9 +257,17 @@
     {
       "id": 32,
       "name": "Final Inspection",
-      "style": "bold-caps",
+      "style": "normal",
       "date": null,
       "description": "Final county inspection and certificate of completion.",
+      "images": []
+    },
+    {
+      "id": 33,
+      "name": "Finished",
+      "style": "bold-caps",
+      "date": null,
+      "description": "Final layout of the pool and spa.\n\nPool dimensions: 15 x 30 ft\nSpa: 7 x 6 ft\nDepth: 3 ft shallow — 5 ft deep end",
       "images": []
     }
   ]
