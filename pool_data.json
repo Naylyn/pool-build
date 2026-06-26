@@ -52,7 +52,7 @@
       "style": "normal",
       "date": "2026-06-17",
       "description": "Utility lines marked and located prior to any digging.",
-      "images": ["images/utility_line1.jpg", "images/utility_line2.jpg"]
+      "images": ["images/utility_line1.jpg", "images/utility_line2.jpeg"]
     },
     {
       "id": 6,
@@ -60,7 +60,7 @@
       "style": "normal",
       "date": "2026-06-22",
       "description": "Removed sod from the pool area in preparation for excavation.",
-      "images": ["images/strip_sod.jpg"]
+      "images": ["images/strip_sod.jpg", "images/skeleton.jpg"]
     },
     {
       "id": 8,
@@ -84,7 +84,7 @@
       "style": "normal",
       "date": "2026-06-23",
       "description": "Underground plumbing and electrical conduit installed before inspection.",
-      "images": []
+      "images": ["images/preplumbing.jpeg", "images/preplumbing2.jpg", "images/preplumbing3.jpg", "images/preplumbing4.jpg"]
     },
     {
       "id": 11,
