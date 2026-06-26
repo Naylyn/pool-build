@@ -52,7 +52,7 @@
       "style": "normal",
       "date": "2026-06-17",
       "description": "Utility lines marked and located prior to any digging.",
-      "images": ["images/utility_line1.jpg", "images/utility_line2.jpeg"]
+      "images": ["images/utility_line1.jpg", "images/utility_line2.jpg"]
     },
     {
       "id": 6,
@@ -60,7 +60,7 @@
       "style": "normal",
       "date": "2026-06-22",
       "description": "Removed sod from the pool area in preparation for excavation.",
-      "images": ["images/strip_sod.jpg", "images/skeleton.jpg"]
+      "images": ["images/strip_sod.jpg", "images/skeleton.jpeg"]
     },
     {
       "id": 8,
@@ -79,14 +79,6 @@
       "images": ["images/LDSLayout.jpg", "images/LDSLayout2.jpg", "images/steel.jpg", "images/steel2.jpg", "images/Silts.jpg"]
     },
     {
-      "id": 10,
-      "name": "Pre-Plumbing & Pre-Electric",
-      "style": "normal",
-      "date": "2026-06-23",
-      "description": "Underground plumbing and electrical conduit installed before inspection.",
-      "images": ["images/preplumbing.jpeg", "images/preplumbing2.jpg", "images/preplumbing3.jpg", "images/preplumbing4.jpg"]
-    },
-    {
       "id": 11,
       "name": "Inspection",
       "style": "normal",
@@ -94,6 +86,14 @@
       "description": "County inspection of steel and layout before gunite.",
       "images": ["images/passed-inspection.jpg"]
     },
+    {
+      "id": 10,
+      "name": "Pre-Plumbing & Pre-Electric",
+      "style": "normal",
+      "date": "2026-06-25",
+      "description": "Underground plumbing and electrical conduit installed before inspection.",
+      "images": ["images/preplumbing.jpeg", "images/preplumbing2.jpg", "images/preplumbing3.jpg", "images/preplumbing4.jpg"]
+    },	
     {
       "id": 12,
       "name": "Gunite",
