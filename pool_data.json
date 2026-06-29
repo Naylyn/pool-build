@@ -21,9 +21,9 @@
     {
       "id": 2,
       "name": "Pool Design",
-      "style": "normal",
+      "style": "bold-caps",
       "date": "2026-05-09",
-      "description": "Picked out design pallet for pool and spa.",
+      "description": "Picked out design pallet for pool and spa./nDeposite Due",
       "images": ["images/pallet.jpg"]
     },
     {
@@ -67,7 +67,7 @@
       "name": "Excavation",
       "style": "bold-caps",
       "date": "2026-06-22",
-      "description": "Major excavation of the pool shell. Dirt hauled off site.",
+      "description": "Major excavation of the pool shell. Dirt hauled off site./n First Draw Due",
       "images": ["images/execavation1.jpg", "images/execavation2.jpg"]
     },
     {
@@ -99,10 +99,17 @@
       "name": "Gunite",
       "style": "bold-caps",
       "date": "2026-06-26",
-      "description": "Gunite (shotcrete) sprayed to form the pool shell. The pool shape is now permanent.",
+      "description": "Gunite (shotcrete) sprayed to form the pool shell. The pool shape is now permanent./n Second Draw Due",
       "images": ["images/gunite1.jpeg", "images/gunite2.jpeg", "images/gunite3.jpeg", "images/gunite4.jpeg", "images/gunite5.jpeg", "images/gunite6.jpeg", "images/gunite7.jpeg", "images/gunite8.jpeg"]
     },
     {
+      "id": 16,
+      "name": "Backfill",
+      "style": "normal",
+      "date": null,
+      "description": "Backfilling around the pool shell with dirt and compaction. \nBackfill in pool construction refers to the process of filling the excavated area around a pool with soil or other materials after the pool is installed. This is essential for providing support, preventing moisture issues, and ensuring the stability of the pool structure.",
+      "images": ["images/backfill1.jpeg", "images/backfill2.jpeg"]
+    },    {
       "id": 13,
       "name": "Pre-Grade",
       "style": "normal",
@@ -126,14 +133,7 @@
       "description": "Rough plumbing and electrical inspection.",
       "images": []
     },
-    {
-      "id": 16,
-      "name": "Backfill",
-      "style": "normal",
-      "date": null,
-      "description": "Backfilling around the pool shell with dirt and compaction. \nBackfill in pool construction refers to the process of filling the excavated area around a pool with soil or other materials after the pool is installed. This is essential for providing support, preventing moisture issues, and ensuring the stability of the pool structure.",
-      "images": []
-    },
+
     {
       "id": 17,
       "name": "Deck Install",
@@ -163,7 +163,7 @@
       "name": "Coping",
       "style": "normal",
       "date": null,
-      "description": "Coping stones installed around the pool edge.",
+      "description": "Coping stones installed around the pool edge./n Third Draw Due",
       "images": []
     },
     {
