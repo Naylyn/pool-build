@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- background circle -->
+  <circle cx="16" cy="16" r="16" fill="#0c4a6e"/>
+  <!-- water body -->
+  <rect x="4" y="14" width="24" height="12" rx="2" fill="#0ea5e9"/>
+  <!-- wave highlight -->
+  <path d="M4 17 Q8 14 12 17 Q16 20 20 17 Q24 14 28 17" 
+        stroke="#7dd3fc" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- pool ladder -->
+  <rect x="22" y="10" width="2" height="8" rx="1" fill="#bae6fd"/>
+  <rect x="20" y="13" width="6" height="1.5" rx="0.75" fill="#bae6fd"/>
+  <!-- swimmer -->
+  <circle cx="11" cy="13" r="2.5" fill="#fbbf24"/>
+  <path d="M11 15.5 Q8 17 6 16" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M11 15.5 Q14 17 16 16" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>

@@ -137,7 +137,7 @@
     {
       "id": 17,
       "name": "Deck Install",
-      "style": "bold-caps",
+      "style": "normal",
       "date": null,
       "description": "Deck forms set and prepared for pouring.",
       "images": []
@@ -161,7 +161,7 @@
     {
       "id": 20,
       "name": "Coping",
-      "style": "normal",
+      "style": "bold-caps",
       "date": null,
       "description": "Coping stones installed around the pool edge./n Third Draw Due",
       "images": []
