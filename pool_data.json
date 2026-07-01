@@ -9,7 +9,7 @@
       "name": "Pool Layout",
       "style": "normal",
       "date": "2026-05-09",
-      "description": "Final layout of the pool and spa.",
+      "description": "Final layout of the pool and spa. Illustration does not show the screen surrounding the pool.\nThis is different from what we first wanted, but functionality wise, this worked better for us.",
       "images": [
         "images/Layout1.jpg",
         "images/Layout2.jpg",
@@ -23,7 +23,7 @@
       "name": "Pool Design",
       "style": "bold-caps",
       "date": "2026-05-09",
-      "description": "Picked out design pallet for pool and spa./nDeposite Due",
+      "description": "Picked out design pallet for pool and spa.\nDeposit Due",
       "images": ["images/pallet.jpg"]
     },
     {
@@ -67,7 +67,7 @@
       "name": "Excavation",
       "style": "bold-caps",
       "date": "2026-06-22",
-      "description": "Major excavation of the pool shell. Dirt hauled off site./n First Draw Due",
+      "description": "Major excavation of the pool shell. Dirt hauled off site.\n First Draw Due",
       "images": ["images/execavation1.jpg", "images/execavation2.jpg"]
     },
     {
@@ -99,7 +99,7 @@
       "name": "Gunite",
       "style": "bold-caps",
       "date": "2026-06-26",
-      "description": "Gunite (shotcrete) sprayed to form the pool shell. The pool shape is now permanent./n Second Draw Due",
+      "description": "Gunite (shotcrete) sprayed to form the pool shell. The pool shape is now permanent.\n Second Draw Due",
       "images": ["images/gunite1.jpeg", "images/gunite2.jpeg", "images/gunite3.jpeg", "images/gunite4.jpeg", "images/gunite5.jpeg", "images/gunite6.jpeg", "images/gunite7.jpeg", "images/gunite8.jpeg"]
     },
     {
@@ -109,6 +109,13 @@
       "date": "2026-06-29",
       "description": "Backfilling around the pool shell with dirt and compaction. \nBackfill in pool construction refers to the process of filling the excavated area around a pool with soil or other materials after the pool is installed. This is essential for providing support, preventing moisture issues, and ensuring the stability of the pool structure.",
       "images": ["images/backfill1.jpeg", "images/backfill2.jpeg"]
+    },    {
+      "id": 34,
+      "name": "Fence Installation",
+      "style": "normal",
+      "date": "2026-07-01",
+      "description": "Installing fence around the backyard.  Not part of the pool process but we included it to surround the backyard.",
+      "images": ["images/fence1.png", "images/fence2.jpeg"]
     },    {
       "id": 13,
       "name": "Pre-Grade",
@@ -163,7 +170,7 @@
       "name": "Coping",
       "style": "bold-caps",
       "date": null,
-      "description": "Coping stones installed around the pool edge./n Third Draw Due",
+      "description": "Coping stones installed around the pool edge.\n Third Draw Due",
       "images": []
     },
     {
