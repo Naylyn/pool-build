@@ -116,20 +116,29 @@
       "date": "2026-07-01",
       "description": "Installing fence around the backyard.  Not part of the pool process but we included it to surround the backyard.",
       "images": ["images/fence1.png", "images/fence2.jpeg", "images/fence3.jpg", "images/fence4.jpg", "images/fence5.jpeg", "images/fence6.jpeg", "images/fence7.jpeg"]
-    },    {
+    },
+    {
+      "id": 14,
+      "name": "Rough Plumbing & Electric Day 1",
+      "style": "normal",
+      "date": null,
+      "description": "Above-ground rough plumbing lines and electrical wiring installed.",
+      "images": ["images/PlumbingDay1a.jpeg","images/PlumbingDay1b.jpeg"]
+    },
+    {
+      "id": 34,
+      "name": "Rough Plumbing & Electric Day 2",
+      "style": "normal",
+      "date": null,
+      "description": "Above-ground rough plumbing lines and electrical wiring installed.",
+      "images": ["images/PlumbingDay2a.jpeg","images/PlumbingDay2a.jpeg"]
+    },
+    {
       "id": 13,
       "name": "Pre-Grade",
       "style": "normal",
       "date": null,
       "description": "Initial grading around the pool area. \nGrading in pool construction refers to leveling and shaping the ground to create a stable base for the pool, preventing issues like cracking or sinking. Proper grading also ensures water drains away from the pool area to avoid erosion and drainage problems.",
-      "images": []
-    },
-    {
-      "id": 14,
-      "name": "Rough Plumbing & Electric",
-      "style": "normal",
-      "date": null,
-      "description": "Above-ground rough plumbing lines and electrical wiring installed.",
       "images": []
     },
     {
