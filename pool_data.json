@@ -121,7 +121,7 @@
       "id": 14,
       "name": "Rough Plumbing & Electric Day 1",
       "style": "normal",
-      "date": null,
+      "date": "2026-07-06",
       "description": "Above-ground rough plumbing lines and electrical wiring installed.",
       "images": ["images/PlumbingDay1a.jpeg","images/PlumbingDay1b.jpeg"]
     },
@@ -129,7 +129,7 @@
       "id": 34,
       "name": "Rough Plumbing & Electric Day 2",
       "style": "normal",
-      "date": null,
+      "date": "2026-07-07",
       "description": "Above-ground rough plumbing lines and electrical wiring installed.",
       "images": ["images/PlumbingDay2a.jpeg","images/PlumbingDay2a.jpeg"]
     },
