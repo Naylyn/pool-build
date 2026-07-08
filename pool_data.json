@@ -134,6 +134,14 @@
       "images": ["images/PlumbingDay2a.jpeg","images/PlumbingDay2b.jpeg"]
     },
     {
+      "id": 15,
+      "name": "Inspection",
+      "style": "normal",
+      "date": "2026-07-08",
+      "description": "Rough plumbing and electrical inspection.",
+      "images": ["images/passed-inspection_pe.png"]
+    },
+    {
       "id": 13,
       "name": "Pre-Grade",
       "style": "normal",
@@ -141,15 +149,6 @@
       "description": "Initial grading around the pool area. \nGrading in pool construction refers to leveling and shaping the ground to create a stable base for the pool, preventing issues like cracking or sinking. Proper grading also ensures water drains away from the pool area to avoid erosion and drainage problems.",
       "images": []
     },
-    {
-      "id": 15,
-      "name": "Inspection",
-      "style": "normal",
-      "date": null,
-      "description": "Rough plumbing and electrical inspection.",
-      "images": []
-    },
-
     {
       "id": 17,
       "name": "Deck Install",
