@@ -119,10 +119,10 @@
     },
     {
       "id": 14,
-      "name": "Rough Plumbing & Electric Day 1",
+      "name": "Pre-Grade, Rough Plumbing & Electric Day 1",
       "style": "normal",
       "date": "2026-07-06",
-      "description": "Above-ground rough plumbing lines and electrical wiring installed.",
+      "description": "Initial grading around the pool area. \nGrading in pool construction refers to leveling and shaping the ground to create a stable base for the pool, preventing issues like cracking or sinking. Proper grading also ensures water drains away from the pool area to avoid erosion and drainage problems. \n\nAbove-ground rough plumbing lines and electrical wiring installed.",
       "images": ["images/PlumbingDay1a.jpeg","images/PlumbingDay1b.jpeg"]
     },
     {
@@ -142,44 +142,21 @@
       "images": ["images/passed-inspection_pe.png"]
     },
     {
-      "id": 13,
-      "name": "Pre-Grade",
-      "style": "normal",
-      "date": null,
-      "description": "Initial grading around the pool area. \nGrading in pool construction refers to leveling and shaping the ground to create a stable base for the pool, preventing issues like cracking or sinking. Proper grading also ensures water drains away from the pool area to avoid erosion and drainage problems.",
-      "images": []
-    },
-    {
-      "id": 17,
-      "name": "Deck Install",
-      "style": "normal",
-      "date": null,
-      "description": "Deck forms set and prepared for pouring.",
-      "images": []
-    },
-    {
-      "id": 18,
-      "name": "Pre-Electric",
-      "style": "normal",
-      "date": null,
-      "description": "Final pre-pour electrical runs and conduit placement.",
-      "images": []
-    },
-    {
       "id": 19,
       "name": "Bond Beam Installation",
       "style": "normal",
       "date": null,
       "description": "Bond beam installed around the pool perimeter.",
-      "images": []
+      "images": ["images/BondBeam.jpeg"]
     },
-    {
-      "id": 20,
-      "name": "Coping",
-      "style": "bold-caps",
+	
+	 {
+      "id": 17,
+      "name": "Deck Install",
+      "style": "normal",
       "date": null,
-      "description": "Coping stones installed around the pool edge.\n Third Draw Due",
-      "images": []
+      "description": "Deck forms set and prepared for pouring.",
+      "images": ["images/DeckInstall1.jpeg", "images/DeckInstall2.jpeg", "images/DeckInstall3.jpeg"]
     },
     {
       "id": 21,
@@ -189,6 +166,26 @@
       "description": "Soil treated for termites beneath deck area.",
       "images": []
     },
+	
+
+    {
+      "id": 18,
+      "name": "Pre-Electric",
+      "style": "normal",
+      "date": null,
+      "description": "Final pre-pour electrical runs and conduit placement.",
+      "images": []
+    },
+
+    {
+      "id": 20,
+      "name": "Coping",
+      "style": "bold-caps",
+      "date": null,
+      "description": "Coping stones installed around the pool edge.\n Third Draw Due",
+      "images": []
+    },
+
     {
       "id": 22,
       "name": "Deck Pour & Texture",
