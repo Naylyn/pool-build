@@ -35,6 +35,14 @@
       "images": ["images/AC1.jpg", "images/AC2.jpg"]
     },
     {
+      "id": 5,
+      "name": "Locate Utilities",
+      "style": "normal",
+      "date": "2026-06-17",
+      "description": "Utility lines marked and located prior to any digging.",
+      "images": ["images/utility_line1.jpg", "images/utility_line2.jpg"]
+    },
+    {
       "id": 4,
       "name": "Cap Sprinkler Pipes",
       "style": "normal",
@@ -45,14 +53,6 @@
         "images/cap_right.jpg",
         "images/removed_pipe.jpg"
       ]
-    },
-    {
-      "id": 5,
-      "name": "Locate Utilities",
-      "style": "normal",
-      "date": "2026-06-17",
-      "description": "Utility lines marked and located prior to any digging.",
-      "images": ["images/utility_line1.jpg", "images/utility_line2.jpg"]
     },
     {
       "id": 6,
@@ -142,40 +142,63 @@
       "images": ["images/passed-inspection_pe.png"]
     },
     {
-      "id": 19,
-      "name": "Bond Beam Installation",
+      "id": 18,
+      "name": "Bond Beam Installation Day 1",
       "style": "normal",
-      "date": null,
+      "date": "2026-07-10",
       "description": "Bond beam installed around the pool perimeter.",
-      "images": ["images/BondBeam.jpeg"]
+      "images": ["images/BondBeam1.jpeg"]
     },
-	
-	 {
+    {
+      "id": 19,
+      "name": "Bond Beam Installation Day 2",
+      "style": "normal",
+      "date": "2026-07-13",
+      "description": "Bond beam installed around the pool perimeter.",
+      "images": ["images/BondBeam2.jpeg", "images/BondBeam3.jpeg", "images/BondBeam4.jpeg"]
+    },
+
+	{
       "id": 17,
       "name": "Deck Install",
       "style": "normal",
-      "date": null,
+      "date": "2026-07-16",
       "description": "Deck forms set and prepared for pouring.",
-      "images": ["images/DeckInstall1.jpeg", "images/DeckInstall2.jpeg", "images/DeckInstall3.jpeg"]
+      "images": ["images/TermiteTreatment.jpeg"]
     },
-    {
-      "id": 21,
-      "name": "Termite Treatment",
-      "style": "normal",
-      "date": null,
-      "description": "Soil treated for termites beneath deck area.",
-      "images": []
-    },
-	
-
     {
       "id": 18,
       "name": "Pre-Electric",
       "style": "normal",
-      "date": null,
+      "date": "2026-07-16",
       "description": "Final pre-pour electrical runs and conduit placement.",
       "images": []
     },
+	{
+      "id": 21,
+      "name": "Termite Treatment",
+      "style": "normal",
+      "date": "2026-07-20",
+      "description": "Soil treated for termites beneath deck area.",
+      "images": ["images/TermiteTreatment.jpeg"]
+    },
+    {
+      "id": 35,
+      "name": "Fix AC Coil",
+      "style": "normal",
+      "date": "2026-07-21",
+      "description": "Copper AC coil was bent and Apple AC came out to repair it",
+      "images": ["images/ACCoil1.jpeg", "images/ACCoil2.jpeg"]
+    },
+    {
+      "id": 22,
+      "name": "Deck Pour & Texture",
+      "style": "normal",
+      "date": "2026-07-22",
+      "description": "Concrete deck poured and textured finish applied.",
+      "images": ["images/Deck1.jpeg","images/Deck2.jpeg"]
+    },
+
 
     {
       "id": 20,
@@ -186,14 +209,7 @@
       "images": []
     },
 
-    {
-      "id": 22,
-      "name": "Deck Pour & Texture",
-      "style": "normal",
-      "date": null,
-      "description": "Concrete deck poured and textured finish applied.",
-      "images": []
-    },
+
     {
       "id": 23,
       "name": "Equipment Delivery & Install",
