@@ -196,7 +196,7 @@
       "style": "normal",
       "date": "2026-07-22",
       "description": "Concrete deck poured and textured finish applied.",
-      "images": ["images/Deck1.jpeg","images/Deck2.jpeg","images/Deck3.jpeg","images/Deck4.jpeg"]
+      "images": ["images/Deck1.jpeg","images/Deck2.jpeg","images/Deck3.jpeg"]
     },
 
 
@@ -204,36 +204,45 @@
       "id": 20,
       "name": "Coping",
       "style": "bold-caps",
-      "date": null,
+      "date": "2026-07-22",
       "description": "Coping stones installed around the pool edge.\n Third Draw Due",
-      "images": []
+      "images": ["images/Deck4.jpeg"]
     },
-
-
     {
       "id": 23,
       "name": "Equipment Delivery & Install",
       "style": "normal",
       "date": null,
       "description": "Pool equipment (pump, filter, heater, salt system) delivered and installed.",
-      "images": []
+      "images": ["images/equipiment1.jpg","images/equipiment2.jpg"]
+    },
+    
+	{
+      "id": 22,
+      "name": "Deck Pour & Texture Continue",
+      "style": "normal",
+      "date": "2026-07-25",
+      "description": "Concrete deck poured and textured finish applied.",
+      "images": ["images/concrete1.jpeg","images/concrete1.jpeg"]
     },
     {
       "id": 24,
       "name": "Screen Measure",
       "style": "normal",
-      "date": null,
-      "description": "Screen enclosure measurements taken for fabrication.",
-      "images": []
+      "date": "2026-07-25",
+      "description": "Screen enclosure measurements taken for fabrication.\nThere's no picture for this so here's another picture of the pool 😃",
+      "images": ["images/concrete1.jpeg"]
     },
-    {
+   {
       "id": 25,
       "name": "Interior Prep",
       "style": "normal",
-      "date": null,
+      "date": "2026-07-28",
       "description": "Pool interior prepped and cleaned for finish application.",
-      "images": []
+      "images": ["images/interior_prep1", "images/interior_prep2", "images/interior_prep3", "images/interior_prep4"]
     },
+
+ 
     {
       "id": 26,
       "name": "Install Screen",
