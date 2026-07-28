@@ -212,7 +212,7 @@
       "id": 23,
       "name": "Equipment Delivery & Install",
       "style": "normal",
-      "date": null,
+      "date": "2026-07-23",
       "description": "Pool equipment (pump, filter, heater, salt system) delivered and installed.",
       "images": ["images/equipiment1.jpg","images/equipiment2.jpg"]
     },
