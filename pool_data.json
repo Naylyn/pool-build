@@ -192,10 +192,10 @@
     },
     {
       "id": 22,
-      "name": "Deck Pour & Texture",
+      "name": "Part 1: Deck Pour & Texture",
       "style": "normal",
       "date": "2026-07-22",
-      "description": "Concrete deck poured and textured finish applied.",
+      "description": "Concrete deck poured and textured finish applied.\nPoured concrete and wait for it to dry",
       "images": ["images/Deck1.jpeg","images/Deck2.jpeg","images/Deck3.jpeg"]
     },
 
@@ -219,10 +219,10 @@
     
 	{
       "id": 22,
-      "name": "Deck Pour & Texture Continue",
+      "name": "Part 2: Deck Pour & Texture Continue",
       "style": "normal",
       "date": "2026-07-25",
-      "description": "Concrete deck poured and textured finish applied.",
+      "description": "Concrete deck poured and textured finish applied.\nAfter concrete dried, added texture and paint",
       "images": ["images/concrete1.jpeg","images/concrete1.jpeg"]
     },
     {
