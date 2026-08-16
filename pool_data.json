@@ -69,7 +69,7 @@
         ]
       }
     ],
-    "decision": "We chose Dreamscape for several reasons.\n1. Jay was very helpful listening to what we were looking for in a pool and he gave helpful suggestions.  We ended up with a pool different from our original design.\n2. It was the closest to our 100K budget for pool, spa, deck and screened enclosure. Decision made on 2026-05-18\n\nOur budget: \n* 70K for pool and spa\n* 10k for deck\n* 20K for screen enclosure."
+    "decision": "We chose Dreamscape for several reasons.\n1. Jay was very helpful, he listened to what we were looking for in a pool and he gave suggestions based on our interest.  We ended up with a pool different from our original design.\n2. It was the closest to our 100K budget for pool, spa, deck and screened enclosure. Decision made on 2026-05-18\n\nOur budget: \n* 70K for pool and spa\n* 10k for deck\n* 20K for screen enclosure."
   },
   "fenceEstimates": {
     "note": "The fence quote covers an upside down L-shaped layout. The left side has 1 gate, and the right side (near the garage) has 2 gates.\nWe noticed some fences around the neighborhood were sagging at the bottom, so we were advised to add reinforcement at the inner base of the fence to prevent that. We got quotes from several fence companies that had already installed fences in the neighborhood, so we'd know they were reliable and could deliver what we needed",
@@ -101,7 +101,7 @@
       {
         "name": "J&B Fence",
         "quote": "Standard: $6,846\nReinforcement added: $7,646",
-        "notes": "Better priced, their standard fence is 6,846 and reinforcement is 1K extra. ",
+        "notes": "We picked this company with the reinforcement. ",
         "chosen": true
       }
     ],
@@ -418,10 +418,10 @@
     },
     {
       "id": 29,
-      "name": "Final Grade",
+      "name": "Clean Out",
       "style": "normal",
       "date": "2026-08-03",
-      "description": "Final landscaping grade and cleanup around the entire pool area.",
+      "description": "Full construction clean-out. Debris removed from site.",
       "images": [
         "images/grade1.jpg",
         "images/grade2.jpg",
@@ -487,14 +487,6 @@
       ]
     },
     {
-      "id": 35,
-      "name": "Install Salt & Ozone",
-      "style": "normal",
-      "date": null,
-      "description": "Not sure when this happens or if it happened already.  Will come back to this later.",
-      "images": []
-    },
-    {
       "id": 36,
       "name": "Fill Pool Day 1",
       "style": "normal",
@@ -520,7 +512,7 @@
       "name": "Fill Pool Day 2 in the evening and Fire up",
       "style": "bold-caps",
       "date": "2026-08-14",
-      "description": "Fill pool and turn on electrical and plumbing.  Pool pic was taken around 6:30 pm.  4th draw due",
+      "description": "Fill pool and turn on electrical and plumbing.  Pool pic was taken around 6:30 pm.\n4th draw due at equipement start up.",
       "images": [
         "images/fill_day2_pm1.jpg",
         "images/fill_day2_pm2.jpg",
@@ -540,10 +532,26 @@
     },
     {
       "id": 40,
-      "name": "Clean Out",
+	  "name": "Final Grade",
       "style": "normal",
       "date": null,
-      "description": "Full construction clean-out. Debris removed from site.",
+      "description": "Final landscaping grade and cleanup around the entire pool area.",
+      "images": []
+    },
+    {
+      "id": 43,
+	  "name": "Final Walk Through - Punch List",
+      "style": "normal",
+      "date": null,
+      "description": "",
+      "images": []
+    },
+    {
+      "id": 35,
+      "name": "Install Salt & Ozone",
+      "style": "normal",
+      "date": null,
+      "description": "Not sure when this happens or if it happened already.  Will come back to this later.",
       "images": []
     },
     {
@@ -556,10 +564,26 @@
     },
     {
       "id": 42,
-      "name": "Finished",
+      "name": "Pool School and Review Warranties",
       "style": "bold-caps",
       "date": null,
       "description": "Final layout of the pool and spa.\n\nPool dimensions: 15 x 30 ft\nSpa: 7 x 6 ft\nDepth: 3 ft shallow — 5 ft deep end",
+      "images": []
+    },
+    {
+      "id": 44,
+      "name": "Reroute Pipes for Sprinklers",
+      "style": "normal",
+      "date": null,
+      "description": "Reroute pipes for sprinklers and bury gutters",
+      "images": []
+    },
+    {
+      "id": 45,
+      "name": "Re-sod grass and add pavers",
+      "style": "normal",
+      "date": null,
+      "description": "Grass is at the point of no return. Plan to re-sod the grass and hopefully it will survive 🤞\nAdd pavers on the right side of the gate.  Waiting for HOA approval.",
       "images": []
     }
   ]
