@@ -170,6 +170,32 @@
   </div>
 </section>
 
+<!-- ════════════ FENCE ESTIMATES (separate from Build Stages, not counted in progress) ════════════ -->
+<section id="fence-estimates-section" class="max-w-7xl mx-auto px-4 pb-6 hidden">
+  <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden">
+    <button id="fence-estimates-toggle" type="button"
+      class="w-full flex items-center justify-between gap-3 p-6 text-left hover:bg-white/5 transition">
+      <h2 class="text-sky-200 text-xs font-semibold uppercase tracking-widest">
+        🚧 Fence Estimates
+      </h2>
+      <span id="fence-estimates-chevron" class="text-sky-300 text-lg flex-shrink-0 transition-transform duration-200">▸</span>
+    </button>
+
+    <div id="fence-estimates-content" class="px-6 pb-6 hidden">
+      <p id="fence-estimates-note" class="text-sky-300 text-sm mb-4 px-1"></p>
+
+      <div id="fence-estimates-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-5"></div>
+
+      <div id="fence-estimates-decision-wrap" class="border-t border-white/10 pt-4 hidden">
+        <div class="text-sky-200 text-xs font-semibold uppercase tracking-widest mb-2">
+          Why We Chose Them
+        </div>
+        <p id="fence-estimates-decision" class="text-sky-100 leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ════════════ MAIN ════════════ -->
 <main class="max-w-7xl mx-auto px-4 pb-12 flex flex-col lg:flex-row gap-6">
 
@@ -297,7 +323,8 @@ async function loadData() {
     });
 
     stages = data.stages;
-    renderEstimates(data.estimates);
+    renderEstimatesGroup('estimates', data.estimates, true);
+    renderEstimatesGroup('fence-estimates', data.fenceEstimates, false);
     init();
   } catch (err) {
     console.error('Failed to load pool_data.json:', err);
@@ -311,24 +338,28 @@ async function loadData() {
 // Lives entirely on its own: does not touch `stages`, the progress bar,
 // or the sidebar. Safe to omit the "estimates" key from the JSON
 // entirely - the section just stays hidden if there is nothing to show.
-function renderEstimates(estimates) {
-  const section = document.getElementById('estimates-section');
-  if (!estimates || !Array.isArray(estimates.companies) || estimates.companies.length === 0) {
+// Renders one estimates group (Pool or Fence) into elements named
+// with the given id prefix. showImages controls whether company cards
+// get a thumbnail strip - Fence estimates pass false since there are
+// no renderings for those.
+function renderEstimatesGroup(prefix, group, showImages) {
+  const section = document.getElementById(`${prefix}-section`);
+  if (!group || !Array.isArray(group.companies) || group.companies.length === 0) {
     section.classList.add('hidden');
     return;
   }
 
-  document.getElementById('estimates-note').textContent = estimates.note || '';
+  document.getElementById(`${prefix}-note`).textContent = group.note || '';
 
-  const grid = document.getElementById('estimates-grid');
+  const grid = document.getElementById(`${prefix}-grid`);
   grid.innerHTML = '';
-  estimates.companies.forEach(c => {
+  group.companies.forEach(c => {
     const card = document.createElement('div');
     card.className = `rounded-xl p-4 border ${
       c.chosen ? 'border-green-400 bg-green-500/10' : 'border-white/10 bg-white/5'
     }`;
 
-    const hasImages = Array.isArray(c.images) && c.images.length > 0;
+    const hasImages = showImages && Array.isArray(c.images) && c.images.length > 0;
     const thumbsHtml = hasImages
       ? `<div class="flex flex-wrap gap-2 mt-3">
           ${c.images.map((src, i) => `
@@ -345,21 +376,23 @@ function renderEstimates(estimates) {
         <div class="font-bold text-white">${escapeHtml(c.name || '')}</div>
         ${c.chosen ? '<span class="flex-shrink-0 text-xs font-bold bg-green-500 text-white px-2 py-0.5 rounded-full">✓ Chosen</span>' : ''}
       </div>
-      ${c.quote ? `<div class="text-sky-300 text-sm font-semibold mb-1">${escapeHtml(c.quote)}</div>` : ''}
-      ${c.notes ? `<div class="text-sky-100 text-sm leading-relaxed">${escapeHtml(c.notes)}</div>` : ''}
+      ${c.quote ? `<div class="text-sky-300 text-sm font-semibold mb-1">${formatMultiline(c.quote)}</div>` : ''}
+      ${c.notes ? `<div class="text-sky-100 text-sm leading-relaxed">${formatMultiline(c.notes)}</div>` : ''}
       ${thumbsHtml}
     `;
 
-    card.querySelectorAll('.estimate-thumb').forEach(img => {
-      img.addEventListener('click', () => openLightbox(c.images, Number(img.dataset.index)));
-    });
+    if (hasImages) {
+      card.querySelectorAll('.estimate-thumb').forEach(img => {
+        img.addEventListener('click', () => openLightbox(c.images, Number(img.dataset.index)));
+      });
+    }
 
     grid.appendChild(card);
   });
 
-  const decisionWrap = document.getElementById('estimates-decision-wrap');
-  if (estimates.decision) {
-    document.getElementById('estimates-decision').textContent = estimates.decision;
+  const decisionWrap = document.getElementById(`${prefix}-decision-wrap`);
+  if (group.decision) {
+    document.getElementById(`${prefix}-decision`).innerHTML = formatMultiline(group.decision);
     decisionWrap.classList.remove('hidden');
   } else {
     decisionWrap.classList.add('hidden');
@@ -374,6 +407,27 @@ function escapeHtml(str) {
   return d.innerHTML;
 }
 
+// Escapes first (so nothing typed into notes/decision/quote can inject
+// HTML), then turns line breaks into <br> - same idea as how the stage
+// description field already handles its own line breaks.
+function formatMultiline(str) {
+  return escapeHtml(str).replace(/\n/g, '<br>');
+}
+
+// Wires up a section's collapse/expand header - shared by both Pool
+// and Fence estimates.
+function wireEstimatesToggle(prefix) {
+  const btn = document.getElementById(`${prefix}-toggle`);
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const content = document.getElementById(`${prefix}-content`);
+    const chevron = document.getElementById(`${prefix}-chevron`);
+    const nowOpen = content.classList.contains('hidden'); // about to open
+    content.classList.toggle('hidden');
+    chevron.style.transform = nowOpen ? 'rotate(90deg)' : 'rotate(0deg)';
+  });
+}
+
 // ── Init ──────────────────────────────────────────
 function init() {
   buildSidebar();
@@ -386,13 +440,8 @@ function init() {
   document.getElementById('nav-next').addEventListener('click', () => selectStage(currentArrayIdx + 1));
   document.addEventListener('keydown', onKey);
 
-  document.getElementById('estimates-toggle').addEventListener('click', () => {
-    const content  = document.getElementById('estimates-content');
-    const chevron  = document.getElementById('estimates-chevron');
-    const nowOpen  = content.classList.contains('hidden'); // about to open
-    content.classList.toggle('hidden');
-    chevron.style.transform = nowOpen ? 'rotate(90deg)' : 'rotate(0deg)';
-  });
+  wireEstimatesToggle('estimates');
+  wireEstimatesToggle('fence-estimates');
 }
 
 // ── Build sidebar ─────────────────────────────────

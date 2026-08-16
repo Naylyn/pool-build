@@ -11,14 +11,23 @@
         "quote": "$114,000",
         "notes": "First company we contacted and didn't go with this because it was out of budget",
         "chosen": false,
-        "images": ["images/est.dreamscape.jpg"]
+        "images": [
+          "images/est.dreamscape.jpg"
+        ]
       },
       {
         "name": "Kura Design Pools",
         "quote": "$100,421.26",
         "notes": "Pool (20x30) with sunshelf and spa.  Acrylic decking (not whole deck) with footer for future screen enclosure.",
         "chosen": false,
-        "images": ["images/est.kura1.jpg", "images/est.kura2.jpg", "images/est.kura3.jpg", "images/est.kura4.jpg", "images/est.kura5.jpg", "images/est.kura6.jpg"]
+        "images": [
+          "images/est.kura1.jpg",
+          "images/est.kura2.jpg",
+          "images/est.kura3.jpg",
+          "images/est.kura4.jpg",
+          "images/est.kura5.jpg",
+          "images/est.kura6.jpg"
+        ]
       },
       {
         "name": "Premier Pools of Central Florida",
@@ -37,26 +46,66 @@
       {
         "name": "Dunota Pool Construction",
         "quote": "$77,132.00",
-        "notes": "Price is only for pool (15x30) with spa. Asked for acrylic deck which would be 16K and screen another 27K. ",
+        "notes": "Price is only for pool (15x30) with spa. \nAsked for acrylic deck which would be 16K.\n Screen is another 27K.\nFor a total of $120.132\nSeems like having a pool is out of our budget 😟",
         "chosen": false,
-        "images": ["images/est.dunota1.jpg",
+        "images": [
+          "images/est.dunota1.jpg",
           "images/est.dunota2.jpg",
           "images/est.dunota3.jpg",
-          "images/est.dunota4.jpg"]
+          "images/est.dunota4.jpg"
+        ]
       },
       {
         "name": "Dreamescape Pools and Spas, Second Visit",
         "quote": "$108,000",
         "notes": "Pool, spa, acrylic deck and screen for 105K.  We asked for heating water circulation which added an extra 3K. Illustration does not show the screen surrounding the pool.\nThis is different from what we first wanted, but functionality wise, this worked better for us.",
         "chosen": true,
-        "images": ["images/Layout1.jpg",
-        "images/Layout2.jpg",
-        "images/Layout3.jpg",
-        "images/Layout4.jpg",
-        "images/Layout5.jpg"]
+        "images": [
+          "images/Layout1.jpg",
+          "images/Layout2.jpg",
+          "images/Layout3.jpg",
+          "images/Layout4.jpg",
+          "images/Layout5.jpg"
+        ]
       }
     ],
     "decision": "We chose Dreamscape for several reasons.\n\n1. Jay was very helpful listening to what we were looking for in a pool and he gave helpful suggestions.  We ended up with a pool different from our original design.\n2. It was the closest to our 100K budget for pool, spa, deck and screened enclosure. Decision made on 2026-05-09\n\nOur budget: \n* 70K for pool and spa\n* 10k for deck\n* 20K for screen enclosure."
+  },
+  "fenceEstimates": {
+    "note": "This is the fence for L shape.  Back and left side.  Left side with 1 gate and right side (garage) with 2 gates. What we notice around the neighborhood fence, the bottom starts to sag.  We were advised to get reinforcement at the inner bottom of the fence to prevent sagging. We checked various fence companies already installed in the neighborhood.",
+    "companies": [
+      {
+        "name": "Eric Fence",
+        "quote": "$8,810",
+        "notes": "Did not come with steel reinforcement.",
+        "chosen": false
+      },
+      {
+        "name": "Mossy Oaks Fence",
+        "quote": "$9,100",
+        "notes": "Does have reinforcement at the bottom but will continue to look around.",
+        "chosen": false
+      },
+      {
+        "name": "Big Woody Fence",
+        "quote": "$8,800",
+        "notes": "Does not come with steel reinforcement and will still check around.",
+        "chosen": false
+      },
+      {
+        "name": "Signature Fence",
+        "quote": "Standard: $7,449\nReinforcement added: $8,247",
+        "notes": "This comes with standard fence for 7,449 but if we want reinforcement at the bottom that's 8,247. Meh..",
+        "chosen": false
+      },
+      {
+        "name": "J&B Fence",
+        "quote": "Standard: $6,846\nReinforcement added: $7,646",
+        "notes": "Better priced, their standard fence is 6,846 and reinforcement is 1K extra. ",
+        "chosen": true
+      }
+    ],
+    "decision": "We went with J&B Fence because they are a better value for what we are looking for.  Although they are slow to respond which was a little nerve wracking.  Glad that we did not pay anything upfront in case we get ghosted.  Overall they pulled through, they didn't ask for initial deposit and we paid at the end."
   },
   "stages": [
     {
@@ -442,7 +491,7 @@
       "name": "Install Salt & Ozone",
       "style": "normal",
       "date": null,
-      "description": "Not sure when this happens or if it happened already.",
+      "description": "Not sure when this happens or if it happened already.  Will come back to this later.",
       "images": []
     },
     {
@@ -468,7 +517,7 @@
     },
     {
       "id": 38,
-      "name": "Fill Pool Day 2 and Fire up",
+      "name": "Fill Pool Day 2 in the evening and Fire up",
       "style": "bold-caps",
       "date": "2026-08-14",
       "description": "Fill pool and turn on electrical and plumbing.  Pool pic was taken around 6:30 pm.  4th draw due",
