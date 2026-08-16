@@ -39,6 +39,10 @@
     }
     .carousel-img:hover { transform: scale(1.02); }
 
+    /* ── Estimate rendering thumbnails ── */
+    .estimate-thumb { transition: transform 0.15s ease, border-color 0.15s ease; }
+    .estimate-thumb:hover { transform: scale(1.08); border-color: #38bdf8; }
+
     /* ── Lightbox ── */
     #lightbox {
       display: none;
@@ -126,6 +130,25 @@
     <p id="progress-label" class="text-sky-300 text-sm mt-1">Loading…</p>
   </div>
 </header>
+
+<!-- ════════════ POOL ESTIMATES (separate from Build Stages, not counted in progress) ════════════ -->
+<section id="estimates-section" class="max-w-7xl mx-auto px-4 pb-6 hidden">
+  <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+    <h2 class="text-sky-200 text-xs font-semibold uppercase tracking-widest mb-1 px-1">
+      💰 Pool Estimates
+    </h2>
+    <p id="estimates-note" class="text-sky-300 text-sm mb-4 px-1"></p>
+
+    <div id="estimates-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-5"></div>
+
+    <div id="estimates-decision-wrap" class="border-t border-white/10 pt-4 hidden">
+      <div class="text-sky-200 text-xs font-semibold uppercase tracking-widest mb-2">
+        Why We Chose Them
+      </div>
+      <p id="estimates-decision" class="text-sky-100 leading-relaxed"></p>
+    </div>
+  </div>
+</section>
 
 <!-- ════════════ MAIN ════════════ -->
 <main class="max-w-7xl mx-auto px-4 pb-12 flex flex-col lg:flex-row gap-6">
@@ -254,6 +277,7 @@ async function loadData() {
     });
 
     stages = data.stages;
+    renderEstimates(data.estimates);
     init();
   } catch (err) {
     console.error('Failed to load pool_data.json:', err);
@@ -261,6 +285,73 @@ async function loadData() {
     document.getElementById('detail-desc').textContent =
       'Make sure pool_data.json is in the same folder as index.html and you are running a local web server (not opening the file directly).';
   }
+}
+
+// ── Pool estimates (separate from stages, read-only display) ──────
+// Lives entirely on its own: does not touch `stages`, the progress bar,
+// or the sidebar. Safe to omit the "estimates" key from the JSON
+// entirely - the section just stays hidden if there is nothing to show.
+function renderEstimates(estimates) {
+  const section = document.getElementById('estimates-section');
+  if (!estimates || !Array.isArray(estimates.companies) || estimates.companies.length === 0) {
+    section.classList.add('hidden');
+    return;
+  }
+
+  document.getElementById('estimates-note').textContent = estimates.note || '';
+
+  const grid = document.getElementById('estimates-grid');
+  grid.innerHTML = '';
+  estimates.companies.forEach(c => {
+    const card = document.createElement('div');
+    card.className = `rounded-xl p-4 border ${
+      c.chosen ? 'border-green-400 bg-green-500/10' : 'border-white/10 bg-white/5'
+    }`;
+
+    const hasImages = Array.isArray(c.images) && c.images.length > 0;
+    const thumbsHtml = hasImages
+      ? `<div class="flex flex-wrap gap-2 mt-3">
+          ${c.images.map((src, i) => `
+            <img src="${escapeHtml(src)}" alt="${escapeHtml(c.name || '')} rendering ${i + 1}"
+                 class="estimate-thumb w-16 h-16 object-cover rounded-lg cursor-zoom-in border border-white/10"
+                 data-src="${escapeHtml(src)}"
+                 onerror="this.src='https://via.placeholder.com/200x200/0c4a6e/7dd3fc?text=Not+Found'">
+          `).join('')}
+        </div>`
+      : '';
+
+    card.innerHTML = `
+      <div class="flex items-start justify-between gap-2 mb-1">
+        <div class="font-bold text-white">${escapeHtml(c.name || '')}</div>
+        ${c.chosen ? '<span class="flex-shrink-0 text-xs font-bold bg-green-500 text-white px-2 py-0.5 rounded-full">✓ Chosen</span>' : ''}
+      </div>
+      ${c.quote ? `<div class="text-sky-300 text-sm font-semibold mb-1">${escapeHtml(c.quote)}</div>` : ''}
+      ${c.notes ? `<div class="text-sky-100 text-sm leading-relaxed">${escapeHtml(c.notes)}</div>` : ''}
+      ${thumbsHtml}
+    `;
+
+    card.querySelectorAll('.estimate-thumb').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.dataset.src));
+    });
+
+    grid.appendChild(card);
+  });
+
+  const decisionWrap = document.getElementById('estimates-decision-wrap');
+  if (estimates.decision) {
+    document.getElementById('estimates-decision').textContent = estimates.decision;
+    decisionWrap.classList.remove('hidden');
+  } else {
+    decisionWrap.classList.add('hidden');
+  }
+
+  section.classList.remove('hidden');
+}
+
+function escapeHtml(str) {
+  const d = document.createElement('div');
+  d.textContent = str || '';
+  return d.innerHTML;
 }
 
 // ── Init ──────────────────────────────────────────

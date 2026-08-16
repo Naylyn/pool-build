@@ -3,28 +3,71 @@
     "title": "Pool Build Progress",
     "address": "Our Pool Journey"
   },
-  "stages": [
-    {
-      "id": 1,
-      "name": "Pool Layout",
-      "style": "normal",
-      "date": "2026-05-09",
-      "description": "Final layout of the pool and spa. Illustration does not show the screen surrounding the pool.\nThis is different from what we first wanted, but functionality wise, this worked better for us.",
-      "images": [
-        "images/Layout1.jpg",
+  "estimates": {
+    "note": "For our own reference, quotes gathered before choosing a pool company. This section is separate from the build stages and does not count toward progress.",
+    "companies": [
+      {
+        "name": "Dreamescape Pools and Spas, First Visit",
+        "quote": "$114,000",
+        "notes": "First company we contacted and didn't go with this because it was out of budget",
+        "chosen": false,
+        "images": ["images/est.dreamscape.jpg"]
+      },
+      {
+        "name": "Kura Design Pools",
+        "quote": "$100,421.26",
+        "notes": "Pool (20x30) with sunshelf and spa.  Acrylic decking (not whole deck) with footer for future screen enclosure.",
+        "chosen": false,
+        "images": ["images/est.kura1.jpg", "images/est.kura2.jpg", "images/est.kura3.jpg", "images/est.kura4.jpg", "images/est.kura5.jpg", "images/est.kura6.jpg"]
+      },
+      {
+        "name": "Premier Pools of Central Florida",
+        "quote": "$145,354",
+        "notes": "Pool, spa, footer deck and screen.",
+        "chosen": false,
+        "images": [
+          "images/est.premier1.jpg",
+          "images/est.premier2.jpg",
+          "images/est.premier3.jpg",
+          "images/est.premier4.jpg",
+          "images/est.premier5.jpg",
+          "images/est.premier6.jpg"
+        ]
+      },
+      {
+        "name": "Dunota Pool Construction",
+        "quote": "$77,132.00",
+        "notes": "Pool (15x30) with spa. Asked for acrylic deck which would be 16K and screen another 27K. ",
+        "chosen": false,
+        "images": ["images/est.dunota1.jpg",
+          "images/est.dunota2.jpg",
+          "images/est.dunota3.jpg",
+          "images/est.dunota4.jpg"]
+      },
+      {
+        "name": "Dreamescape Pools and Spas, Second Visit",
+        "quote": "$108,000",
+        "notes": "Pool, spa, acrylic deck and screen for 105K.  We asked for heating water circulation which added an extra 3K. Illustration does not show the screen surrounding the pool.\nThis is different from what we first wanted, but functionality wise, this worked better for us.",
+        "chosen": true,
+        "images": ["images/Layout1.jpg",
         "images/Layout2.jpg",
         "images/Layout3.jpg",
         "images/Layout4.jpg",
-        "images/Layout5.jpg"
-      ]
-    },
+        "images/Layout5.jpg"]
+      }
+    ],
+    "decision": "We chose Dreamscape for several reasons.\n\n1. Jay was very helpful listening to what we were looking for in a pool and he gave helpful suggestions.  We ended up with a pool different from our original design.\n2. It was the closest to our 100K budget for pool, spa, deck and screened enclosure. Decision made on 2026-05-09\n\nOur budget: \n* 70K for pool and spa\n* 10k for deck\n* 20K for screen enclosure."
+  },
+  "stages": [
     {
       "id": 2,
       "name": "Pool Design",
       "style": "bold-caps",
       "date": "2026-05-09",
       "description": "Picked out design pallet for pool and spa.\nDeposit Due",
-      "images": ["images/pallet.jpg"]
+      "images": [
+        "images/pallet.jpg"
+      ]
     },
     {
       "id": 3,
@@ -32,18 +75,24 @@
       "style": "normal",
       "date": "2026-05-27",
       "description": "Relocated the AC unit to make room for pool construction access.",
-      "images": ["images/AC1.jpg", "images/AC2.jpg"]
+      "images": [
+        "images/AC1.jpg",
+        "images/AC2.jpg"
+      ]
     },
     {
-      "id": 5,
+      "id": 4,
       "name": "Locate Utilities",
       "style": "normal",
       "date": "2026-06-17",
       "description": "Utility lines marked and located prior to any digging.",
-      "images": ["images/utility_line1.jpg", "images/utility_line2.jpg"]
+      "images": [
+        "images/utility_line1.jpg",
+        "images/utility_line2.jpg"
+      ]
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Cap Sprinkler Pipes",
       "style": "normal",
       "date": "2026-06-19",
@@ -60,31 +109,45 @@
       "style": "normal",
       "date": "2026-06-22",
       "description": "Removed sod from the pool area in preparation for excavation.",
-      "images": ["images/strip_sod.jpg", "images/skeleton.jpeg"]
+      "images": [
+        "images/strip_sod.jpg",
+        "images/skeleton.jpeg"
+      ]
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "Excavation",
       "style": "bold-caps",
       "date": "2026-06-22",
       "description": "Major excavation of the pool shell. Dirt hauled off site.\n First Draw Due",
-      "images": ["images/execavation1.jpg", "images/execavation2.jpg"]
+      "images": [
+        "images/execavation1.jpg",
+        "images/execavation2.jpg"
+      ]
     },
     {
-      "id": 9,
+      "id": 8,
       "name": "LDS Layout, Dig, Steel, Install Silt Fence",
       "style": "normal",
       "date": "2026-06-23",
       "description": "Layout completed, additional digging, steel rebar installed, and silt fence erected for erosion control.",
-      "images": ["images/LDSLayout.jpg", "images/LDSLayout2.jpg", "images/steel.jpg", "images/steel2.jpg", "images/Silts.jpg"]
+      "images": [
+        "images/LDSLayout.jpg",
+        "images/LDSLayout2.jpg",
+        "images/steel.jpg",
+        "images/steel2.jpg",
+        "images/Silts.jpg"
+      ]
     },
     {
-      "id": 11,
+      "id": 9,
       "name": "Inspection",
       "style": "normal",
       "date": "2026-06-24",
       "description": "County inspection of steel and layout before gunite.",
-      "images": ["images/passed-inspection.jpg"]
+      "images": [
+        "images/passed-inspection.jpg"
+      ]
     },
     {
       "id": 10,
@@ -92,30 +155,56 @@
       "style": "normal",
       "date": "2026-06-25",
       "description": "Underground plumbing and electrical conduit installed before inspection.",
-      "images": ["images/preplumbing.jpeg", "images/preplumbing2.jpg", "images/preplumbing3.jpg", "images/preplumbing4.jpg"]
-    },	
+      "images": [
+        "images/preplumbing.jpeg",
+        "images/preplumbing2.jpg",
+        "images/preplumbing3.jpg",
+        "images/preplumbing4.jpg"
+      ]
+    },
     {
-      "id": 12,
+      "id": 11,
       "name": "Gunite",
       "style": "bold-caps",
       "date": "2026-06-26",
       "description": "Gunite (shotcrete) sprayed to form the pool shell. The pool shape is now permanent.\n Second Draw Due",
-      "images": ["images/gunite1.jpeg", "images/gunite2.jpeg", "images/gunite3.jpeg", "images/gunite4.jpeg", "images/gunite5.jpeg", "images/gunite6.jpeg", "images/gunite7.jpeg", "images/gunite8.jpeg"]
+      "images": [
+        "images/gunite1.jpeg",
+        "images/gunite2.jpeg",
+        "images/gunite3.jpeg",
+        "images/gunite4.jpeg",
+        "images/gunite5.jpeg",
+        "images/gunite6.jpeg",
+        "images/gunite7.jpeg",
+        "images/gunite8.jpeg"
+      ]
     },
     {
-      "id": 16,
+      "id": 12,
       "name": "Backfill",
       "style": "normal",
       "date": "2026-06-29",
       "description": "Backfilling around the pool shell with dirt and compaction. \nBackfill in pool construction refers to the process of filling the excavated area around a pool with soil or other materials after the pool is installed. This is essential for providing support, preventing moisture issues, and ensuring the stability of the pool structure.",
-      "images": ["images/backfill1.jpeg", "images/backfill2.jpeg"]
-    },    {
-      "id": 34,
+      "images": [
+        "images/backfill1.jpeg",
+        "images/backfill2.jpeg"
+      ]
+    },
+    {
+      "id": 13,
       "name": "Fence Installation",
       "style": "normal",
       "date": "2026-07-01",
       "description": "Installing fence around the backyard.  Not part of the pool process but we included it to surround the backyard.",
-      "images": ["images/fence1.png", "images/fence2.jpeg", "images/fence3.jpg", "images/fence4.jpg", "images/fence5.jpeg", "images/fence6.jpeg", "images/fence7.jpeg"]
+      "images": [
+        "images/fence1.png",
+        "images/fence2.jpeg",
+        "images/fence3.jpg",
+        "images/fence4.jpg",
+        "images/fence5.jpeg",
+        "images/fence6.jpeg",
+        "images/fence7.jpeg"
+      ]
     },
     {
       "id": 14,
@@ -123,177 +212,233 @@
       "style": "normal",
       "date": "2026-07-06",
       "description": "Initial grading around the pool area. \nGrading in pool construction refers to leveling and shaping the ground to create a stable base for the pool, preventing issues like cracking or sinking. Proper grading also ensures water drains away from the pool area to avoid erosion and drainage problems. \n\nAbove-ground rough plumbing lines and electrical wiring installed.",
-      "images": ["images/PlumbingDay1a.jpeg","images/PlumbingDay1b.jpeg"]
+      "images": [
+        "images/PlumbingDay1a.jpeg",
+        "images/PlumbingDay1b.jpeg"
+      ]
     },
     {
-      "id": 34,
+      "id": 15,
       "name": "Rough Plumbing & Electric Day 2",
       "style": "normal",
       "date": "2026-07-07",
       "description": "Above-ground rough plumbing lines and electrical wiring installed.",
-      "images": ["images/PlumbingDay2a.jpeg","images/PlumbingDay2b.jpeg"]
+      "images": [
+        "images/PlumbingDay2a.jpeg",
+        "images/PlumbingDay2b.jpeg"
+      ]
     },
     {
-      "id": 15,
+      "id": 16,
       "name": "Inspection",
       "style": "normal",
       "date": "2026-07-08",
       "description": "Rough plumbing and electrical inspection.",
-      "images": ["images/passed-inspection_pe.png"]
+      "images": [
+        "images/passed-inspection_pe.png"
+      ]
     },
     {
-      "id": 18,
+      "id": 17,
       "name": "Bond Beam Installation Day 1",
       "style": "normal",
       "date": "2026-07-10",
       "description": "Bond beam installed around the pool perimeter.",
-      "images": ["images/BondBeam1.jpeg"]
+      "images": [
+        "images/BondBeam1.jpeg"
+      ]
     },
     {
-      "id": 19,
+      "id": 18,
       "name": "Bond Beam Installation Day 2",
       "style": "normal",
       "date": "2026-07-13",
       "description": "Bond beam installed around the pool perimeter.",
-      "images": ["images/BondBeam2.jpeg", "images/BondBeam3.jpeg", "images/BondBeam4.jpeg"]
+      "images": [
+        "images/BondBeam2.jpeg",
+        "images/BondBeam3.jpeg",
+        "images/BondBeam4.jpeg"
+      ]
     },
-
-	{
-      "id": 17,
+    {
+      "id": 19,
       "name": "Deck Install",
       "style": "normal",
       "date": "2026-07-16",
       "description": "Deck forms set and prepared for pouring.",
-      "images": ["images/TermiteTreatment.jpeg"]
+      "images": [
+        "images/TermiteTreatment.jpeg"
+      ]
     },
     {
-      "id": 18,
+      "id": 20,
       "name": "Pre-Electric",
       "style": "normal",
       "date": "2026-07-16",
       "description": "Final pre-pour electrical runs and conduit placement.",
       "images": []
     },
-	{
+    {
       "id": 21,
       "name": "Termite Treatment",
       "style": "normal",
       "date": "2026-07-20",
       "description": "Soil treated for termites beneath deck area.",
-      "images": ["images/TermiteTreatment.jpeg"]
+      "images": [
+        "images/TermiteTreatment.jpeg"
+      ]
     },
     {
-      "id": 35,
+      "id": 22,
       "name": "Fix AC Coil",
       "style": "normal",
       "date": "2026-07-21",
       "description": "Copper AC coil was bent and Apple AC came out to repair it",
-      "images": ["images/ACCoil1.jpeg", "images/ACCoil2.jpeg"]
+      "images": [
+        "images/ACCoil1.jpeg",
+        "images/ACCoil2.jpeg"
+      ]
     },
     {
-      "id": 22,
+      "id": 23,
       "name": "Part 1: Deck Pour & Texture",
       "style": "normal",
       "date": "2026-07-22",
       "description": "Concrete deck poured and textured finish applied.\nPoured concrete and wait for it to dry",
-      "images": ["images/Deck1.jpeg","images/Deck2.jpeg","images/Deck3.jpeg"]
+      "images": [
+        "images/Deck1.jpeg",
+        "images/Deck2.jpeg",
+        "images/Deck3.jpeg"
+      ]
     },
-
-
     {
-      "id": 20,
+      "id": 24,
       "name": "Coping",
       "style": "bold-caps",
       "date": "2026-07-22",
       "description": "Coping stones installed around the pool edge.\n Third Draw Due",
-      "images": ["images/Deck4.jpeg"]
+      "images": [
+        "images/Deck4.jpeg"
+      ]
     },
     {
-      "id": 23,
+      "id": 25,
       "name": "Equipment Delivery & Install",
       "style": "normal",
       "date": "2026-07-23",
       "description": "Pool equipment (pump, filter, heater, salt system) delivered and installed.",
-      "images": ["images/equipiment1.jpg","images/equipiment2.jpg"]
+      "images": [
+        "images/equipiment1.jpg",
+        "images/equipiment2.jpg"
+      ]
     },
-    
-	{
-      "id": 22,
+    {
+      "id": 26,
       "name": "Part 2: Deck Pour & Texture Continue",
       "style": "normal",
       "date": "2026-07-25",
       "description": "Concrete deck poured and textured finish applied.\nAfter concrete dried, added texture and paint",
-      "images": ["images/concrete1.jpeg","images/concrete2.jpeg","images/concrete3.jpeg"]
+      "images": [
+        "images/concrete1.jpeg",
+        "images/concrete2.jpeg",
+        "images/concrete3.jpeg"
+      ]
     },
     {
-      "id": 24,
+      "id": 27,
       "name": "Screen Measure",
       "style": "normal",
       "date": "2026-07-25",
       "description": "Screen enclosure measurements taken for fabrication.😃",
-      "images": ["images/screenmeasure.jpeg"]
+      "images": [
+        "images/screenmeasure.jpeg"
+      ]
     },
-   {
-      "id": 25,
+    {
+      "id": 28,
       "name": "Interior Prep",
       "style": "normal",
       "date": "2026-07-28",
       "description": "Pool interior prepped and cleaned for finish application.",
-      "images": ["images/interior_prep1.jpg", "images/interior_prep2.jpg", "images/interior_prep3.jpg", "images/interior_prep4.jpg"]
+      "images": [
+        "images/interior_prep1.jpg",
+        "images/interior_prep2.jpg",
+        "images/interior_prep3.jpg",
+        "images/interior_prep4.jpg"
+      ]
     },
     {
-      "id": 31,
+      "id": 29,
       "name": "Final Grade",
       "style": "normal",
       "date": "2026-08-03",
       "description": "Final landscaping grade and cleanup around the entire pool area.",
-      "images": ["images/grade1.jpg", "images/grade2.jpg", "images/grade3.jpg", "images/grade4.jpg", "images/grade5.jpg", "images/grade6.jpg"]
+      "images": [
+        "images/grade1.jpg",
+        "images/grade2.jpg",
+        "images/grade3.jpg",
+        "images/grade4.jpg",
+        "images/grade5.jpg",
+        "images/grade6.jpg"
+      ]
     },
- 
     {
-      "id": 26,
+      "id": 30,
       "name": "Install Screen",
       "style": "normal",
       "date": "2026-08-05",
       "description": "Screen enclosure structure and panels installed.",
-      "images": ["images/screen1.jpg", "images/screen2.jpg", "images/screen3.jpg", "images/screen4.jpg", "images/screen5.jpg"]
+      "images": [
+        "images/screen1.jpg",
+        "images/screen2.jpg",
+        "images/screen3.jpg",
+        "images/screen4.jpg",
+        "images/screen5.jpg"
+      ]
     },
-	
     {
-      "id": 27,
+      "id": 31,
       "name": "Door & Window Alarms",
       "style": "normal",
       "date": "2026-08-06",
       "description": "Safety alarms installed on all pool access doors and windows per code. This needs to be fixed",
-      "images": ["images/door1.jpg"]
+      "images": [
+        "images/door1.jpg"
+      ]
     },
     {
-      "id": 28,
+      "id": 32,
       "name": "Inspection",
       "style": "normal",
       "date": "2026-08-07",
       "description": "Screen and safety equipment inspection.",
-      "images": ["images/inspection_passed.png"]
+      "images": [
+        "images/inspection_passed.png"
+      ]
     },
-	{
-      "id": 50,
+    {
+      "id": 33,
       "name": "AC was slanted",
       "style": "normal",
       "date": "2026-08-10",
       "description": "Called Apple AC to move the AC so it's not slanted",
-      "images": ["images/fix_ac1.jpg"]
+      "images": [
+        "images/fix_ac1.jpg"
+      ]
     },
     {
-      "id": 30,
+      "id": 34,
       "name": "Interior Finish, Installation & Acid Wash",
       "style": "Bold",
       "date": "2026-08-11",
       "description": "Interior plaster or pebble finish applied, then acid washed for prep. Fourth Draw Due",
-      "images": ["images/interior1.jpg", "images/interior2.jpg"]
-    },	
-
+      "images": [
+        "images/interior1.jpg",
+        "images/interior2.jpg"
+      ]
+    },
     {
-      "id": 40,
+      "id": 35,
       "name": "Install Salt & Ozone",
       "style": "normal",
       "date": null,
@@ -301,49 +446,59 @@
       "images": []
     },
     {
-      "id": 41,
+      "id": 36,
       "name": "Fill Pool Day 1",
       "style": "normal",
       "date": "2026-08-13",
       "description": "The interior was cleaned and started the fill around 11:00 am",
-      "images": ["images/fill_day1.jpg"]
+      "images": [
+        "images/fill_day1.jpg"
+      ]
     },
     {
-      "id": 41,
+      "id": 37,
       "name": "Fill Pool Day 2 in the morning ",
       "style": "normal",
       "date": "2026-08-14",
       "description": "Fill pool continue, the hose ran overnight",
-      "images": ["images/fill_day2_am1.jpg","images/fill_day2_am2.jpg"]
+      "images": [
+        "images/fill_day2_am1.jpg",
+        "images/fill_day2_am2.jpg"
+      ]
     },
     {
-      "id": 41,
+      "id": 38,
       "name": "Fill Pool Day 2 and Fire up",
       "style": "normal",
       "date": "2026-08-14",
       "description": "Fill pool and turn on electrical and plumbing.  Pool pic was taken around 6:30 pm",
-      "images": ["images/fill_day2_pm1.jpg", "images/fill_day2_pm2.jpg", "images/fill_day2_pm3.jpg"]
+      "images": [
+        "images/fill_day2_pm1.jpg",
+        "images/fill_day2_pm2.jpg",
+        "images/fill_day2_pm3.jpg"
+      ]
     },
     {
-      "id": 41,
+      "id": 39,
       "name": "Fill Pool Day 3",
       "style": "normal",
       "date": "2026-08-15",
       "description": "Didn't take a picture in the morning. This pool picture was taken around 6:30 pm.",
-      "images": ["images/fill_day3_pm1.jpg", "images/fill_day3_pm2.jpg"]
+      "images": [
+        "images/fill_day3_pm1.jpg",
+        "images/fill_day3_pm2.jpg"
+      ]
     },
     {
-      "id": 29,
+      "id": 40,
       "name": "Clean Out",
       "style": "normal",
       "date": null,
       "description": "Full construction clean-out. Debris removed from site.",
       "images": []
     },
-
-
     {
-      "id": 32,
+      "id": 41,
       "name": "Final Inspection",
       "style": "normal",
       "date": null,
@@ -351,7 +506,7 @@
       "images": []
     },
     {
-      "id": 33,
+      "id": 42,
       "name": "Finished",
       "style": "bold-caps",
       "date": null,
