@@ -264,8 +264,8 @@
       "name": "Door & Window Alarms",
       "style": "normal",
       "date": "2026-08-06",
-      "description": "Safety alarms installed on all pool access doors and windows per code.",
-      "images": ["images/door1.jpg", "images/door2.jpg", "images/door3.jpg"]
+      "description": "Safety alarms installed on all pool access doors and windows per code. This needs to be fixed",
+      "images": ["images/door1.jpg"]
     },
     {
       "id": 28,
@@ -273,7 +273,7 @@
       "style": "normal",
       "date": "2026-08-07",
       "description": "Screen and safety equipment inspection.",
-      "images": ["images/inspection_passed.jpg"]
+      "images": ["images/inspection_passed.png"]
     },
 	{
       "id": 50,
@@ -286,9 +286,9 @@
     {
       "id": 30,
       "name": "Interior Finish, Installation & Acid Wash",
-      "style": "normal",
+      "style": "Bold",
       "date": "2026-08-11",
-      "description": "Interior plaster or pebble finish applied, then acid washed for prep.",
+      "description": "Interior plaster or pebble finish applied, then acid washed for prep. Fourth Draw Due",
       "images": ["images/interior1.jpg", "images/interior2.jpg"]
     },	
 
