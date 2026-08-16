@@ -230,7 +230,7 @@
       "name": "Screen Measure",
       "style": "normal",
       "date": "2026-07-25",
-      "description": "Screen enclosure measurements taken for fabrication.\nThere's no picture for this so here's another picture of the pool 😃",
+      "description": "Screen enclosure measurements taken for fabrication.😃",
       "images": ["images/screenmeasure.jpeg"]
     },
    {
@@ -241,31 +241,96 @@
       "description": "Pool interior prepped and cleaned for finish application.",
       "images": ["images/interior_prep1.jpg", "images/interior_prep2.jpg", "images/interior_prep3.jpg", "images/interior_prep4.jpg"]
     },
-
+    {
+      "id": 31,
+      "name": "Final Grade",
+      "style": "normal",
+      "date": "2026-08-03",
+      "description": "Final landscaping grade and cleanup around the entire pool area.",
+      "images": ["images/grade1.jpg", "images/grade2.jpg", "images/grade3.jpg", "images/grade4.jpg", "images/grade5.jpg", "images/grade6.jpg"]
+    },
  
     {
       "id": 26,
       "name": "Install Screen",
       "style": "normal",
-      "date": null,
+      "date": "2026-08-05",
       "description": "Screen enclosure structure and panels installed.",
-      "images": []
+      "images": ["images/screen1.jpg", "images/screen2.jpg", "images/screen3.jpg", "images/screen4.jpg", "images/screen5.jpg"]
     },
+	
     {
       "id": 27,
       "name": "Door & Window Alarms",
       "style": "normal",
-      "date": null,
+      "date": "2026-08-06",
       "description": "Safety alarms installed on all pool access doors and windows per code.",
-      "images": []
+      "images": ["images/door1.jpg", "images/door2.jpg", "images/door3.jpg"]
     },
     {
       "id": 28,
       "name": "Inspection",
       "style": "normal",
-      "date": null,
+      "date": "2026-08-07",
       "description": "Screen and safety equipment inspection.",
+      "images": ["images/inspection_passed.jpg"]
+    },
+	{
+      "id": 50,
+      "name": "AC was slanted",
+      "style": "normal",
+      "date": "2026-08-10",
+      "description": "Called Apple AC to move the AC so it's not slanted",
+      "images": ["images/fix_ac1.jpg"]
+    },
+    {
+      "id": 30,
+      "name": "Interior Finish, Installation & Acid Wash",
+      "style": "normal",
+      "date": "2026-08-11",
+      "description": "Interior plaster or pebble finish applied, then acid washed for prep.",
+      "images": ["images/interior1.jpg", "images/interior2.jpg"]
+    },	
+
+    {
+      "id": 40,
+      "name": "Install Salt & Ozone",
+      "style": "normal",
+      "date": null,
+      "description": "Not sure when this happens or if it happened already.",
       "images": []
+    },
+    {
+      "id": 41,
+      "name": "Fill Pool Day 1",
+      "style": "normal",
+      "date": "2026-08-13",
+      "description": "The interior was cleaned and started the fill around 11:00 am",
+      "images": ["images/fill_day1.jpg"]
+    },
+    {
+      "id": 41,
+      "name": "Fill Pool Day 2 in the morning ",
+      "style": "normal",
+      "date": "2026-08-14",
+      "description": "Fill pool continue, the hose ran overnight",
+      "images": ["images/fill_day2_am1.jpg","images/fill_day2_am2.jpg"]
+    },
+    {
+      "id": 41,
+      "name": "Fill Pool Day 2 and Fire up",
+      "style": "normal",
+      "date": "2026-08-14",
+      "description": "Fill pool and turn on electrical and plumbing.  Pool pic was taken around 6:30 pm",
+      "images": ["images/fill_day2_pm1.jpg", "images/fill_day2_pm2.jpg", "images/fill_day2_pm3.jpg"]
+    },
+    {
+      "id": 41,
+      "name": "Fill Pool Day 3",
+      "style": "normal",
+      "date": "2026-08-15",
+      "description": "Didn't take a picture in the morning. This pool picture was taken around 6:30 pm.",
+      "images": ["images/fill_day3_pm1.jpg", "images/fill_day3_pm2.jpg"]
     },
     {
       "id": 29,
@@ -275,22 +340,8 @@
       "description": "Full construction clean-out. Debris removed from site.",
       "images": []
     },
-    {
-      "id": 30,
-      "name": "Interior Finish, Installation & Acid Wash",
-      "style": "normal",
-      "date": null,
-      "description": "Interior plaster or pebble finish applied, then acid washed for prep.",
-      "images": []
-    },
-    {
-      "id": 31,
-      "name": "Final Grade",
-      "style": "normal",
-      "date": null,
-      "description": "Final landscaping grade and cleanup around the entire pool area.",
-      "images": []
-    },
+
+
     {
       "id": 32,
       "name": "Final Inspection",
