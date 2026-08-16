@@ -55,7 +55,6 @@
       max-width: 92vw; max-height: 88vh;
       border-radius: 12px;
       box-shadow: 0 0 60px rgba(14,165,233,.4);
-      cursor: zoom-out;
     }
 
     /* ── Progress bar ── */
@@ -99,7 +98,21 @@
   <button onclick="closeLightbox(event)"
     class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/30
            flex items-center justify-center text-2xl font-bold transition">×</button>
-  <img id="lightbox-img" src="" alt="" onclick="closeLightbox(event)" />
+
+  <button id="lightbox-prev" onclick="lightboxPrev(event)"
+    class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-10
+           w-11 h-11 rounded-full bg-black/50 hover:bg-black/70
+           flex items-center justify-center text-2xl transition hidden">‹</button>
+
+  <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()" />
+
+  <button id="lightbox-next" onclick="lightboxNext(event)"
+    class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-10
+           w-11 h-11 rounded-full bg-black/50 hover:bg-black/70
+           flex items-center justify-center text-2xl transition hidden">›</button>
+
+  <div id="lightbox-counter"
+       class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/50 text-white text-sm px-3 py-1 rounded-full hidden"></div>
 </div>
 
 <!-- ════════════ HEADER ════════════ -->
@@ -133,19 +146,26 @@
 
 <!-- ════════════ POOL ESTIMATES (separate from Build Stages, not counted in progress) ════════════ -->
 <section id="estimates-section" class="max-w-7xl mx-auto px-4 pb-6 hidden">
-  <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-    <h2 class="text-sky-200 text-xs font-semibold uppercase tracking-widest mb-1 px-1">
-      💰 Pool Estimates
-    </h2>
-    <p id="estimates-note" class="text-sky-300 text-sm mb-4 px-1"></p>
+  <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden">
+    <button id="estimates-toggle" type="button"
+      class="w-full flex items-center justify-between gap-3 p-6 text-left hover:bg-white/5 transition">
+      <h2 class="text-sky-200 text-xs font-semibold uppercase tracking-widest">
+        💰 Pool Estimates
+      </h2>
+      <span id="estimates-chevron" class="text-sky-300 text-lg flex-shrink-0 transition-transform duration-200">▸</span>
+    </button>
 
-    <div id="estimates-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-5"></div>
+    <div id="estimates-content" class="px-6 pb-6 hidden">
+      <p id="estimates-note" class="text-sky-300 text-sm mb-4 px-1"></p>
 
-    <div id="estimates-decision-wrap" class="border-t border-white/10 pt-4 hidden">
-      <div class="text-sky-200 text-xs font-semibold uppercase tracking-widest mb-2">
-        Why We Chose Them
+      <div id="estimates-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-5"></div>
+
+      <div id="estimates-decision-wrap" class="border-t border-white/10 pt-4 hidden">
+        <div class="text-sky-200 text-xs font-semibold uppercase tracking-widest mb-2">
+          Why We Chose Them
+        </div>
+        <p id="estimates-decision" class="text-sky-100 leading-relaxed"></p>
       </div>
-      <p id="estimates-decision" class="text-sky-100 leading-relaxed"></p>
     </div>
   </div>
 </section>
@@ -314,7 +334,7 @@ function renderEstimates(estimates) {
           ${c.images.map((src, i) => `
             <img src="${escapeHtml(src)}" alt="${escapeHtml(c.name || '')} rendering ${i + 1}"
                  class="estimate-thumb w-16 h-16 object-cover rounded-lg cursor-zoom-in border border-white/10"
-                 data-src="${escapeHtml(src)}"
+                 data-index="${i}"
                  onerror="this.src='https://via.placeholder.com/200x200/0c4a6e/7dd3fc?text=Not+Found'">
           `).join('')}
         </div>`
@@ -331,7 +351,7 @@ function renderEstimates(estimates) {
     `;
 
     card.querySelectorAll('.estimate-thumb').forEach(img => {
-      img.addEventListener('click', () => openLightbox(img.dataset.src));
+      img.addEventListener('click', () => openLightbox(c.images, Number(img.dataset.index)));
     });
 
     grid.appendChild(card);
@@ -365,6 +385,14 @@ function init() {
   document.getElementById('nav-prev').addEventListener('click', () => selectStage(currentArrayIdx - 1));
   document.getElementById('nav-next').addEventListener('click', () => selectStage(currentArrayIdx + 1));
   document.addEventListener('keydown', onKey);
+
+  document.getElementById('estimates-toggle').addEventListener('click', () => {
+    const content  = document.getElementById('estimates-content');
+    const chevron  = document.getElementById('estimates-chevron');
+    const nowOpen  = content.classList.contains('hidden'); // about to open
+    content.classList.toggle('hidden');
+    chevron.style.transform = nowOpen ? 'rotate(90deg)' : 'rotate(0deg)';
+  });
 }
 
 // ── Build sidebar ─────────────────────────────────
@@ -525,7 +553,10 @@ function buildCarousel(images) {
         img.src =
           `https://via.placeholder.com/800x420/0c4a6e/7dd3fc?text=Media+${i+1}+Not+Found`;
       };
-      img.addEventListener('click', () => openLightbox(url));
+      img.addEventListener('click', () => {
+        const imagesOnly = images.filter(src => !isVideo(src));
+        openLightbox(imagesOnly, imagesOnly.indexOf(url));
+      });
       slide.appendChild(img);
     }
 
@@ -580,7 +611,11 @@ function nextImage() { goToImage(currentImgIdx + 1); }
 function onKey(e) {
   const lbOpen = document.getElementById('lightbox').classList.contains('open');
   if (e.key === 'Escape')      { closeLightbox(); return; }
-  if (lbOpen) return;
+  if (lbOpen) {
+    if (e.key === 'ArrowLeft')  lightboxPrev();
+    if (e.key === 'ArrowRight') lightboxNext();
+    return;
+  }
   if (e.key === 'ArrowLeft')   prevImage();
   if (e.key === 'ArrowRight')  nextImage();
   if (e.key === 'ArrowUp')     selectStage(currentArrayIdx - 1);
@@ -588,12 +623,52 @@ function onKey(e) {
 }
 
 // ── Lightbox (images only — videos use native controls) ───
-function openLightbox(src) {
-  if (isVideo(src)) return;   // videos play inline, no lightbox needed
-  document.getElementById('lightbox-img').src = src;
+// Accepts either a single image URL, or an array of URLs plus which one
+// to start on - the second form is what makes the prev/next arrows show
+// up, so a gallery (a stage's photos, or a company's renderings) can be
+// browsed without closing and reopening for each picture.
+let lightboxImages = [];
+let lightboxIdx    = 0;
+
+function openLightbox(images, startIndex = 0) {
+  const list = (Array.isArray(images) ? images : [images]).filter(src => !isVideo(src));
+  if (list.length === 0) return;
+
+  lightboxImages = list;
+  lightboxIdx    = Math.max(0, Math.min(startIndex, list.length - 1));
+
+  showLightboxImage();
   document.getElementById('lightbox').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
+
+function showLightboxImage() {
+  document.getElementById('lightbox-img').src = lightboxImages[lightboxIdx];
+
+  const multi = lightboxImages.length > 1;
+  document.getElementById('lightbox-prev').classList.toggle('hidden', !multi);
+  document.getElementById('lightbox-next').classList.toggle('hidden', !multi);
+
+  const counter = document.getElementById('lightbox-counter');
+  if (multi) {
+    counter.textContent = `${lightboxIdx + 1} / ${lightboxImages.length}`;
+    counter.classList.remove('hidden');
+  } else {
+    counter.classList.add('hidden');
+  }
+}
+
+function lightboxPrev(e) {
+  if (e) e.stopPropagation();
+  lightboxIdx = (lightboxIdx - 1 + lightboxImages.length) % lightboxImages.length;
+  showLightboxImage();
+}
+function lightboxNext(e) {
+  if (e) e.stopPropagation();
+  lightboxIdx = (lightboxIdx + 1) % lightboxImages.length;
+  showLightboxImage();
+}
+
 function closeLightbox(e) {
   if (e) e.stopPropagation();
   document.getElementById('lightbox').classList.remove('open');

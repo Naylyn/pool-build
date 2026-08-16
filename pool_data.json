@@ -37,7 +37,7 @@
       {
         "name": "Dunota Pool Construction",
         "quote": "$77,132.00",
-        "notes": "Pool (15x30) with spa. Asked for acrylic deck which would be 16K and screen another 27K. ",
+        "notes": "Price is only for pool (15x30) with spa. Asked for acrylic deck which would be 16K and screen another 27K. ",
         "chosen": false,
         "images": ["images/est.dunota1.jpg",
           "images/est.dunota2.jpg",
@@ -469,9 +469,9 @@
     {
       "id": 38,
       "name": "Fill Pool Day 2 and Fire up",
-      "style": "normal",
+      "style": "bold-caps",
       "date": "2026-08-14",
-      "description": "Fill pool and turn on electrical and plumbing.  Pool pic was taken around 6:30 pm",
+      "description": "Fill pool and turn on electrical and plumbing.  Pool pic was taken around 6:30 pm.  4th draw due",
       "images": [
         "images/fill_day2_pm1.jpg",
         "images/fill_day2_pm2.jpg",
