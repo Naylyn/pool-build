@@ -536,7 +536,7 @@
       "style": "normal",
       "date": "2026-08-17 & 2026-08-18",
       "description": "Alarm was set up and salt was added to tank.",
-      "images": []
+      "images": ["images/salt1.jpg", "images/salt2.jpg", "images/salt3.jpg"]
     },
 	{
       "id": 46,
@@ -544,7 +544,7 @@
       "style": "normal",
       "date": "2026-08-19",
       "description": "Cement crew fixed cracked sidewalk with cement from utility trucks driving through.",
-      "images": []
+      "images": ["images/sidewalk1.jpg", "images/sidewalk2.jpg", "images/sidewalk3.jpg"]
     },
     {
       "id": 40,
