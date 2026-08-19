@@ -530,6 +530,22 @@
         "images/fill_day3_pm2.jpg"
       ]
     },
+	    {
+      "id": 35,
+      "name": "Install Salt & Ozone",
+      "style": "normal",
+      "date": "2026-08-17 & 2026-08-18",
+      "description": "Alarm was set up and salt was added to tank.",
+      "images": []
+    },
+	{
+      "id": 46,
+      "name": "Fix sidewalk",
+      "style": "normal",
+      "date": "2026-08-19",
+      "description": "Cement crew fixed cracked sidewalk with cement from utility trucks driving through.",
+      "images": []
+    },
     {
       "id": 40,
 	  "name": "Final Grade",
@@ -546,14 +562,7 @@
       "description": "",
       "images": []
     },
-    {
-      "id": 35,
-      "name": "Install Salt & Ozone",
-      "style": "normal",
-      "date": null,
-      "description": "Not sure when this happens or if it happened already.  Will come back to this later.",
-      "images": []
-    },
+
     {
       "id": 41,
       "name": "Final Inspection",
@@ -566,8 +575,8 @@
       "id": 42,
       "name": "Pool School and Review Warranties",
       "style": "bold-caps",
-      "date": null,
-      "description": "Final layout of the pool and spa.\n\nPool dimensions: 15 x 30 ft\nSpa: 7 x 6 ft\nDepth: 3 ft shallow — 5 ft deep end",
+      "date": "2026-08-25",
+      "description": "Scheduled Pool School for August 25th. Final layout of the pool and spa.\n\nPool dimensions: 15 x 30 ft\nSpa: 7 x 6 ft\nDepth: 3 ft shallow — 5 ft deep end",
       "images": []
     },
     {

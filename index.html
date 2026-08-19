@@ -144,8 +144,36 @@
   </div>
 </header>
 
+<!-- ════════════ ESTIMATES (Pool + Fence) — password-gated, collapsed by default ════════════ -->
+<section id="private-estimates-section" class="max-w-7xl mx-auto px-4 pb-6">
+  <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden">
+    <button id="private-estimates-toggle" type="button"
+      class="w-full flex items-center justify-between gap-3 p-6 text-left hover:bg-white/5 transition">
+      <h2 class="text-sky-200 text-xs font-semibold uppercase tracking-widest">
+        🔒 Estimates
+      </h2>
+      <span id="private-estimates-chevron" class="text-sky-300 text-lg flex-shrink-0 transition-transform duration-200">▸</span>
+    </button>
+
+    <!-- Shown when expanded but not yet unlocked this session -->
+    <div id="private-estimates-gate" class="px-6 pb-6 hidden">
+      <div class="flex flex-wrap items-center gap-2">
+        <input type="password" id="estimates-password-input"
+          class="flex-1 min-w-[160px] bg-black/20 border border-white/20 rounded-lg px-3 py-2 text-white placeholder-sky-300/50"
+          placeholder="Password" autocomplete="off">
+        <button id="estimates-password-submit" type="button"
+          class="bg-sky-500 hover:bg-sky-400 text-white font-semibold px-4 py-2 rounded-lg transition">
+          Unlock
+        </button>
+      </div>
+      <p id="estimates-password-error" class="text-red-300 text-sm mt-2 hidden">Incorrect password.</p>
+    </div>
+
+    <!-- Revealed once unlocked - the two existing estimates panels are unchanged inside here -->
+    <div id="private-estimates-content" class="px-6 pb-6 hidden">
+
 <!-- ════════════ POOL ESTIMATES (separate from Build Stages, not counted in progress) ════════════ -->
-<section id="estimates-section" class="max-w-7xl mx-auto px-4 pb-6 hidden">
+<section id="estimates-section" class="pb-6 hidden">
   <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden">
     <button id="estimates-toggle" type="button"
       class="w-full flex items-center justify-between gap-3 p-6 text-left hover:bg-white/5 transition">
@@ -171,7 +199,7 @@
 </section>
 
 <!-- ════════════ FENCE ESTIMATES (separate from Build Stages, not counted in progress) ════════════ -->
-<section id="fence-estimates-section" class="max-w-7xl mx-auto px-4 pb-6 hidden">
+<section id="fence-estimates-section" class="pb-6 hidden">
   <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden">
     <button id="fence-estimates-toggle" type="button"
       class="w-full flex items-center justify-between gap-3 p-6 text-left hover:bg-white/5 transition">
@@ -196,8 +224,13 @@
   </div>
 </section>
 
+    </div>
+  </div>
+</section>
+
 <!-- ════════════ MAIN ════════════ -->
 <main class="max-w-7xl mx-auto px-4 pb-12 flex flex-col lg:flex-row gap-6">
+
 
   <!-- LEFT: stage list -->
   <aside class="lg:w-72 xl:w-80 flex-shrink-0">
@@ -428,6 +461,83 @@ function wireEstimatesToggle(prefix) {
   });
 }
 
+// ── Password gate for the Estimates panel ──────────
+// This is a static site with no backend, so nothing here is truly
+// "secure" - any check has to run in the visitor's own browser, which
+// means the logic (and this hash) is visible to anyone who looks. What
+// this DOES do: keep the password itself out of plain sight in the
+// repo/page source (a SHA-256 hash instead of the literal text), which
+// stops it from being obvious to a casual browser. It is a light
+// deterrent for casual visitors, not real access control.
+const ESTIMATES_PASSWORD_HASH = '49920bd0f3d5c668bd537b68f8ea5bafe4d060e0ec2bf17db21023d7c72a68dd';
+const ESTIMATES_SESSION_KEY = 'estimates_unlocked';
+
+async function sha256Hex(text) {
+  const bytes = new TextEncoder().encode(text);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', bytes);
+  return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function estimatesUnlocked() {
+  return sessionStorage.getItem(ESTIMATES_SESSION_KEY) === '1';
+}
+
+// sessionStorage clears itself when the browser tab/window is closed -
+// that is the "cache expiry" here. Ask if you would rather it last a
+// fixed number of hours instead (that needs a timestamp in localStorage
+// rather than sessionStorage, a small change).
+function markEstimatesUnlocked() {
+  sessionStorage.setItem(ESTIMATES_SESSION_KEY, '1');
+}
+
+async function checkEstimatesPassword() {
+  const input = document.getElementById('estimates-password-input');
+  const errorEl = document.getElementById('estimates-password-error');
+  const hash = await sha256Hex(input.value);
+  input.value = '';
+
+  if (hash === ESTIMATES_PASSWORD_HASH) {
+    markEstimatesUnlocked();
+    errorEl.classList.add('hidden');
+    document.getElementById('private-estimates-gate').classList.add('hidden');
+    document.getElementById('private-estimates-content').classList.remove('hidden');
+  } else {
+    errorEl.classList.remove('hidden');
+    input.focus();
+  }
+}
+
+function wirePrivateEstimatesToggle() {
+  const toggleBtn = document.getElementById('private-estimates-toggle');
+  const gate      = document.getElementById('private-estimates-gate');
+  const content   = document.getElementById('private-estimates-content');
+  const chevron   = document.getElementById('private-estimates-chevron');
+
+  toggleBtn.addEventListener('click', () => {
+    const isCollapsed = gate.classList.contains('hidden') && content.classList.contains('hidden');
+
+    if (!isCollapsed) {
+      gate.classList.add('hidden');
+      content.classList.add('hidden');
+      chevron.style.transform = 'rotate(0deg)';
+      return;
+    }
+
+    chevron.style.transform = 'rotate(90deg)';
+    if (estimatesUnlocked()) {
+      content.classList.remove('hidden');
+    } else {
+      gate.classList.remove('hidden');
+      document.getElementById('estimates-password-input').focus();
+    }
+  });
+
+  document.getElementById('estimates-password-submit').addEventListener('click', checkEstimatesPassword);
+  document.getElementById('estimates-password-input').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') checkEstimatesPassword();
+  });
+}
+
 // ── Init ──────────────────────────────────────────
 function init() {
   buildSidebar();
@@ -442,6 +552,7 @@ function init() {
 
   wireEstimatesToggle('estimates');
   wireEstimatesToggle('fence-estimates');
+  wirePrivateEstimatesToggle();
 }
 
 // ── Build sidebar ─────────────────────────────────
